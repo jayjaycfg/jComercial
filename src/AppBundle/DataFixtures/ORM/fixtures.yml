@@ -1,0 +1,4 @@
+AppBundle\Entity\Player:
+    user_{1..10}:
+        name: <name()>
+        password: foo
