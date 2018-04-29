@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -25,21 +26,28 @@ class User implements UserInterface
      */
     private $id;
     /**
-     * @ORM\Column(type="string", nullable=false)
+     * @ORM\Column(type="string", nullable=false, unique=true)
+     * @Assert\NotBlank(message="Campo obligatorio")
+     *
      */
     private $name;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo obligatorio")
      */
     private $lastName;
     /**
      * @ORM\Column(type="string")
+     *
      */
     private $password;
-
+    /**
+     * @Assert\NotBlank(message="Campo obligatorio")
+     */
     private $plainPassword;
     /**
      * @ORM\Column(type="json_array")
+     * @Assert\NotBlank(message="Campo obligatorio")
      */
     private $roles = [];
 

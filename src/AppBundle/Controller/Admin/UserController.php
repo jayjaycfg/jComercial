@@ -12,11 +12,11 @@ namespace AppBundle\Controller\Admin;
 use AppBundle\Entity\User;
 use AppBundle\Form\UserEditForm;
 use AppBundle\Form\UserRegisterForm;
-use AppBundle\Security\LoginFormAuthenticator;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
@@ -24,7 +24,7 @@ class UserController extends Controller
     /**
      * @Route("/admin/user/register", name="register_user")
      */
-    public function registerAction(Request $request, LoginFormAuthenticator $authenticator)
+    public function registerAction(Request $request)
     {
         $form = $this->createForm(UserRegisterForm::class);
         $form->handleRequest($request);
@@ -39,18 +39,25 @@ class UserController extends Controller
                     'success',
                     'Usuario insertado con exito'
                 );
-//                return $this->get('security.authentication.guard_handler')
-//                ->authenticateUserAndHandleSuccess(
-//                    $user,
-//                    $request,
-//                    $authenticator,
-//                    'main'
-//                );
             }
         return $this->render("admin/user/register.html.twig",[
             'form' => $form->createView()
         ]);
 
+    }
+
+
+    /**
+     * @Route("/admin/user/delete/{id}", name="delete_user")
+     * @Method("DELETE")
+     */
+    public function deleteAction(User $user)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($user);
+        $em->flush();
+
+            return new Response(null,204);
     }
 
     /**
@@ -112,6 +119,5 @@ class UserController extends Controller
                 'userForm' => $form->createView()
             ]);
     }
-
 
 }

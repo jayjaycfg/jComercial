@@ -1,8 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<h2>Listado de Usuarios</h2>
-	<table class="table table-striped">
+<h2>Listado de Usuarios</h2>
+	<a href="{{ path('register_user') }}">
+		<span class="btn btn-link fa fa-plus-circle"></span>
+	</a>
+
+	<table class="table table-striped js-user-table">
 		<thead>
 			<tr>
 				<th>Nombre</th>
@@ -22,14 +26,48 @@
 					</td>
 					<td>{{ user.roles|json_encode }}</td>
 					<td>
-						<a href="#" class="pull-left btn btn-link">
-							<span class="fa fa-trash js-delete-row">Eliminar</span>
+						<a href="#" class="pull-left btn btn-link js-delete-user"
+						data-url="{{ path('delete_user',{
+							'id': user.id
+						}) }}"
+						>
+							<span class="fa fa-trash"></span>
 						</a>
 					</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script>
+        $(document).ready(function(){
+
+            var $table = $('.js-user-table');
+
+            $table.find('.js-delete-user').on('click',function(e){
+                e.preventDefault();
+
+                $(this).addClass('text-danger');
+                $(this).find('.fa')
+                    .removeClass('fa-trash')
+					.addClass('fa-spinner')
+                    .addClass('fa-spin');
+
+                var $row = $(this).closest('tr');
+
+                $.ajax({
+					url: $(this).data('url'),
+					method: 'DELETE'
+
+				}).done(function () {
+					$row.fadeOut();
+                });
+            });
+        });
+	</script>
 {% endblock %}
 
 

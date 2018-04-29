@@ -109,6 +109,17 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::registerAction',  '_route' => 'register_user',);
             }
 
+            // delete_user
+            if (0 === strpos($pathinfo, '/admin/user/delete') && preg_match('#^/admin/user/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ('DELETE' !== $canonicalMethod) {
+                    $allow[] = 'DELETE';
+                    goto not_delete_user;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete_user')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::deleteAction',));
+            }
+            not_delete_user:
+
             // list_users
             if ('/admin/user/list' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::listAction',  '_route' => 'list_users',);

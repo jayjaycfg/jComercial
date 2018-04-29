@@ -8,13 +8,12 @@
 
                 {{ form_start(userForm) }}
                     {{ form_errors(userForm) }}
-
                     {{ form_row(userForm.name) }}
                     {{ form_row(userForm.lastName) }}
 				    {{ form_row(userForm.plainPassword) }}
 				    {{ form_row(userForm.roles) }}
 
-                    <button type="submit" class="btn btn-primary">Editar</button>
+                    <button type="submit" class="btn btn-primary" formnovalidate>Editar</button>
                 {{ form_end(userForm) }}
             </div>
         </div>
