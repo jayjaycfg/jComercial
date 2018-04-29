@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Registro de Usuario</h1>
+					{{ form_start(form) }}
+						{{ form_row(form.name) }}
+						{{ form_row(form.lastName) }}
+						{{ form_row(form.plainPassword.first,{
+							'label' : 'ContraseNNA'
+						}) }}
+						{{ form_row(form.plainPassword.second,{
+							'label' : 'Repetir ContraseNNA'
+						}) }}
+						{{ form_row(form.roles) }}
+					<button type="submit" class="btn btn-primary" formnovalidate>Registrar!</button>
+					{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

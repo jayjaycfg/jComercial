@@ -1,4 +1,6 @@
-AppBundle\Entity\Player:
-    user_{1..10}:
-        name: <name()>
-        password: foo
+AppBundle\Entity\User:
+    user_{1..5}:
+        name: user<current()>
+        lastName: <lastName()>
+        plainPassword: 'foo'
+        roles: ['ROLE_ADMIN']

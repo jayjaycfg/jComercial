@@ -3,9 +3,11 @@
 security:
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    encoders:
+        AppBundle\Entity\User: bcrypt
     providers:
         my_provider:
-            entity: { class: Appbundle\Entity\Player, property: name}
+            entity: { class: Appbundle\Entity\User, property: name}
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -24,7 +26,10 @@ security:
             #form_login: ~
             guard:
                 authenticators:
-                    - AppBundle\Security\AuthenticatorLoginForm
+                    - AppBundle\Security\LoginFormAuthenticator
 
             logout:
                 path: /logout
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }

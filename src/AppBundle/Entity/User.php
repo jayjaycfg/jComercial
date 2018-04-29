@@ -25,9 +25,13 @@ class User implements UserInterface
      */
     private $id;
     /**
-     * @ORM\Column(type="string", nullable="false")
+     * @ORM\Column(type="string", nullable=false)
      */
     private $name;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $lastName;
     /**
      * @ORM\Column(type="string")
      */
@@ -35,34 +39,89 @@ class User implements UserInterface
 
     private $plainPassword;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="json_array")
      */
-    private $ocupation;
+    private $roles = [];
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        return $this->name;
     }
 
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        $roles = $this->roles;
+
+        if(!in_array('ROLE_USER', $roles)){
+            $roles[] = 'ROLE_USER';
+        }
+            return $roles;
     }
 
     public function getPassword()
     {
-        // TODO: Implement getPassword() method.
+        return $this->password;
     }
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+
     }
 
     public function eraseCredentials()
     {
-        // TODO: Implement eraseCredentials() method.
+        $this->plainPassword = null;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+        $this->password = null;
+    }
+
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+    }
+
+    public function getFullName()
+    {
+        return trim($this->getUsername().' '.$this->getLastName());
+
+    }
 
 }

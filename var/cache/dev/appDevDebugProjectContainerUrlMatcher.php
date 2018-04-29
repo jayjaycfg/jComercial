@@ -103,6 +103,29 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/admin/user')) {
+            // register_user
+            if ('/admin/user/register' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::registerAction',  '_route' => 'register_user',);
+            }
+
+            // list_users
+            if ('/admin/user/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::listAction',  '_route' => 'list_users',);
+            }
+
+            // show_user
+            if (preg_match('#^/admin/user/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_user')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::showAction',));
+            }
+
+            // user_edit
+            if (preg_match('#^/admin/user/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_edit')), array (  '_controller' => 'AppBundle\\Controller\\Admin\\UserController::editAction',));
+            }
+
+        }
+
         // security_login
         if ('/login' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginAction',  '_route' => 'security_login',);

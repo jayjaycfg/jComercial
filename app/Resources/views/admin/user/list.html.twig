@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h2>Listado de Usuarios</h2>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Ocupacion</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in users  %}
+				<tr>
+					<td>
+						<a href="{{ path('show_user',{
+							'id' : user.id
+						}) }}">
+						{{ user.name }}
+						</a>
+					</td>
+					<td>{{ user.roles|json_encode }}</td>
+					<td>
+						<a href="#" class="pull-left btn btn-link">
+							<span class="fa fa-trash js-delete-row">Eliminar</span>
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
+
+

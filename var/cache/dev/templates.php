@@ -115,7 +115,13 @@
   'WebProfilerBundle:Profiler:bag.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/bag.html.twig',
   'WebProfilerBundle:Profiler:layout.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/layout.html.twig',
   'WebProfilerBundle:Profiler:toolbar_js.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar_js.html.twig',
+  ':admin/user:edit.html.twig' => __DIR__.'/../../../app/Resources/views/admin/user/edit.html.twig',
+  ':admin/user:register.html.twig' => __DIR__.'/../../../app/Resources/views/admin/user/register.html.twig',
+  ':admin/user:list.html.twig' => __DIR__.'/../../../app/Resources/views/admin/user/list.html.twig',
+  ':admin/user:show.html.twig' => __DIR__.'/../../../app/Resources/views/admin/user/show.html.twig',
+  ':security:login.html.twig' => __DIR__.'/../../../app/Resources/views/security/login.html.twig',
   '::base.html.twig' => __DIR__.'/../../../app/Resources/views/base.html.twig',
+  ':player:list.html.twig' => __DIR__.'/../../../app/Resources/views/player/list.html.twig',
   ':player:show.html.twig' => __DIR__.'/../../../app/Resources/views/player/show.html.twig',
   ':main:homepage.html.twig' => __DIR__.'/../../../app/Resources/views/main/homepage.html.twig',
 );

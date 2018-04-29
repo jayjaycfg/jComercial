@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8">
+                <h1>
+                    {{ user.name }}
+                    <a href="{{ path('user_edit',{
+                        'id': user.id
+                    }) }}" class="pull-right btn btn-link">
+                        <span class="fa fa-pencil"></span>
+                    </a>
+
+                </h1>
+
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <td>{{ user.fullName }}</td>
+                    </tr>
+                    <tr>
+                        <th>Ocupacion</th>
+                        <td>{{ user.roles|json_encode }}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            {#<div class="col-xs-4">#}
+                {#<h3>Genus Studied</h3>#}
+                {#<ul class="list-group">#}
+                    {#{% for genusStudied in user.genusStudied %}#}
+                        {#<li class="list-group-item">#}
+                            {#<a href="{{ path('genus_show',{#}
+                                {#'genusName' : genusStudied.name#}
+                            {#}) }}">#}
+                            {#{{ genusStudied.name }}#}
+                            {#</a>#}
+                        {#</li>#}
+                    {#{% endfor %}#}
+                {#</ul>#}
+            {#</div>#}
+        </div>
+    </div>
+{% endblock %}

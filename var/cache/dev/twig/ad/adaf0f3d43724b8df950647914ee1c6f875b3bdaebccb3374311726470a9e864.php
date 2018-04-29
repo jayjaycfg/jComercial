@@ -15,20 +15,20 @@ class __TwigTemplate_0590cf1eaf8ce77994149f0f352dc3b3a24e5ae0ab53661ac74a9a39065
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a37359cdfd733da66ec1727db22a979cc964a09221055989e2f348209d0d9f56 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_a37359cdfd733da66ec1727db22a979cc964a09221055989e2f348209d0d9f56->enter($__internal_a37359cdfd733da66ec1727db22a979cc964a09221055989e2f348209d0d9f56_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
+        $__internal_af0d54480c24e55fc1356b3192c5921dd20b1ad55089ccefc7c5a96fa7aca7a9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_af0d54480c24e55fc1356b3192c5921dd20b1ad55089ccefc7c5a96fa7aca7a9->enter($__internal_af0d54480c24e55fc1356b3192c5921dd20b1ad55089ccefc7c5a96fa7aca7a9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
 
-        $__internal_3fc4c640f9a028a236fff923ee15bbc812af504bbfa4f2669d56bd6007a0c8ec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3fc4c640f9a028a236fff923ee15bbc812af504bbfa4f2669d56bd6007a0c8ec->enter($__internal_3fc4c640f9a028a236fff923ee15bbc812af504bbfa4f2669d56bd6007a0c8ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
+        $__internal_32700c56e02099c3a044b8c18c2fa070deaf543ba7874fdcc5778e4451876579 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_32700c56e02099c3a044b8c18c2fa070deaf543ba7874fdcc5778e4451876579->enter($__internal_32700c56e02099c3a044b8c18c2fa070deaf543ba7874fdcc5778e4451876579_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/images/icon-plus-square-o.svg"));
 
         // line 1
         echo "<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1344 800v64q0 14-9 23t-23 9H960v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23V896H480q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352V416q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448V416q0-66-47-113t-113-47H480q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5T1312 1536H480q-119 0-203.5-84.5T192 1248V416q0-119 84.5-203.5T480 128h832q119 0 203.5 84.5T1600 416z\"/></svg>
 ";
         
-        $__internal_a37359cdfd733da66ec1727db22a979cc964a09221055989e2f348209d0d9f56->leave($__internal_a37359cdfd733da66ec1727db22a979cc964a09221055989e2f348209d0d9f56_prof);
+        $__internal_af0d54480c24e55fc1356b3192c5921dd20b1ad55089ccefc7c5a96fa7aca7a9->leave($__internal_af0d54480c24e55fc1356b3192c5921dd20b1ad55089ccefc7c5a96fa7aca7a9_prof);
 
         
-        $__internal_3fc4c640f9a028a236fff923ee15bbc812af504bbfa4f2669d56bd6007a0c8ec->leave($__internal_3fc4c640f9a028a236fff923ee15bbc812af504bbfa4f2669d56bd6007a0c8ec_prof);
+        $__internal_32700c56e02099c3a044b8c18c2fa070deaf543ba7874fdcc5778e4451876579->leave($__internal_32700c56e02099c3a044b8c18c2fa070deaf543ba7874fdcc5778e4451876579_prof);
 
     }
 
@@ -53,6 +53,6 @@ class __TwigTemplate_0590cf1eaf8ce77994149f0f352dc3b3a24e5ae0ab53661ac74a9a39065
     public function getSourceContext()
     {
         return new Twig_Source("<svg width=\"1792\" height=\"1792\" viewBox=\"0 0 1792 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M1344 800v64q0 14-9 23t-23 9H960v352q0 14-9 23t-23 9h-64q-14 0-23-9t-9-23V896H480q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h352V416q0-14 9-23t23-9h64q14 0 23 9t9 23v352h352q14 0 23 9t9 23zm128 448V416q0-66-47-113t-113-47H480q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113zm128-832v832q0 119-84.5 203.5T1312 1536H480q-119 0-203.5-84.5T192 1248V416q0-119 84.5-203.5T480 128h832q119 0 203.5 84.5T1600 416z\"/></svg>
-", "@Twig/images/icon-plus-square-o.svg", "/var/www/html/HeroQuest/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/images/icon-plus-square-o.svg");
+", "@Twig/images/icon-plus-square-o.svg", "/var/www/html/jComercial/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views/images/icon-plus-square-o.svg");
     }
 }
