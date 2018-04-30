@@ -22,112 +22,116 @@ class __TwigTemplate_5d36f86b3083e0e9b1ecbc8094365e0234f5fc4247f6bc8e491b4a739de
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_666422e31315998e72dc6d16a344381ddd5497260e63de2599926539360a3197 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_666422e31315998e72dc6d16a344381ddd5497260e63de2599926539360a3197->enter($__internal_666422e31315998e72dc6d16a344381ddd5497260e63de2599926539360a3197_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/user/list.html.twig"));
+        $__internal_848afdab5879e9d7fc4efd1f242600aee8b3bc832d9c54a6ca0d5c875a0eb902 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_848afdab5879e9d7fc4efd1f242600aee8b3bc832d9c54a6ca0d5c875a0eb902->enter($__internal_848afdab5879e9d7fc4efd1f242600aee8b3bc832d9c54a6ca0d5c875a0eb902_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/user/list.html.twig"));
 
-        $__internal_e2a96d481fe30531aa15c8ab875c06298f5a237749945d1786b4ee669d5e3e1e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e2a96d481fe30531aa15c8ab875c06298f5a237749945d1786b4ee669d5e3e1e->enter($__internal_e2a96d481fe30531aa15c8ab875c06298f5a237749945d1786b4ee669d5e3e1e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/user/list.html.twig"));
+        $__internal_949c10cdcf247fcf2ca54e468a6364e75e3657d3758f20ea4775373f4faed2dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_949c10cdcf247fcf2ca54e468a6364e75e3657d3758f20ea4775373f4faed2dd->enter($__internal_949c10cdcf247fcf2ca54e468a6364e75e3657d3758f20ea4775373f4faed2dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "admin/user/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_666422e31315998e72dc6d16a344381ddd5497260e63de2599926539360a3197->leave($__internal_666422e31315998e72dc6d16a344381ddd5497260e63de2599926539360a3197_prof);
+        $__internal_848afdab5879e9d7fc4efd1f242600aee8b3bc832d9c54a6ca0d5c875a0eb902->leave($__internal_848afdab5879e9d7fc4efd1f242600aee8b3bc832d9c54a6ca0d5c875a0eb902_prof);
 
         
-        $__internal_e2a96d481fe30531aa15c8ab875c06298f5a237749945d1786b4ee669d5e3e1e->leave($__internal_e2a96d481fe30531aa15c8ab875c06298f5a237749945d1786b4ee669d5e3e1e_prof);
+        $__internal_949c10cdcf247fcf2ca54e468a6364e75e3657d3758f20ea4775373f4faed2dd->leave($__internal_949c10cdcf247fcf2ca54e468a6364e75e3657d3758f20ea4775373f4faed2dd_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fc0e68e16ad15bd408fb956bd89f4edb2ee30f510977921ef452e046e1e5b654 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_fc0e68e16ad15bd408fb956bd89f4edb2ee30f510977921ef452e046e1e5b654->enter($__internal_fc0e68e16ad15bd408fb956bd89f4edb2ee30f510977921ef452e046e1e5b654_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_08715d47beeef312a304bce238cd3648596d563257049742894f26bcb16fb8e9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_08715d47beeef312a304bce238cd3648596d563257049742894f26bcb16fb8e9->enter($__internal_08715d47beeef312a304bce238cd3648596d563257049742894f26bcb16fb8e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_67c3eaa825b21a68d66656f4f57882665a4da68a8a307814c3162a3febaebc2a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_67c3eaa825b21a68d66656f4f57882665a4da68a8a307814c3162a3febaebc2a->enter($__internal_67c3eaa825b21a68d66656f4f57882665a4da68a8a307814c3162a3febaebc2a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2364325fa5bc5c7aae5c6559d5e3b7ba0660186c8047a60c0313689490e89eeb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2364325fa5bc5c7aae5c6559d5e3b7ba0660186c8047a60c0313689490e89eeb->enter($__internal_2364325fa5bc5c7aae5c6559d5e3b7ba0660186c8047a60c0313689490e89eeb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<h2>Listado de Usuarios</h2>
-\t<a href=\"";
-        // line 5
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("register_user");
-        echo "\">
-\t\t<span class=\"btn btn-link fa fa-plus-circle\"></span>
-\t</a>
+        echo "    <div class=\"container\">
+        <div class=\"row\">
 
-\t<table class=\"table table-striped js-user-table\">
-\t\t<thead>
-\t\t\t<tr>
-\t\t\t\t<th>Nombre</th>
-\t\t\t\t<th>Ocupacion</th>
-\t\t\t\t<th>Acciones</th>
-\t\t\t</tr>
-\t\t</thead>
-\t\t<tbody>
-\t\t\t";
-        // line 18
+            <div class=\"col-xs-12\">
+                <div class=\"pull-right\" style=\"margin-bottom: 10px; margin-top: 20px;\">
+                    <a href=\"";
+        // line 9
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("register_user");
+        echo "\" class=\"btn btn-primary pull-right\">Insertar <span class=\"fa fa-plus-circle\"></span></a>
+                </div>
+
+                <h1>Usuarios</h1>
+
+                <table class=\"table table-striped js-user-table\">
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Ocupación</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    ";
+        // line 20
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["users"] ?? $this->getContext($context, "users")));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 19
-            echo "\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<a href=\"";
             // line 21
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_user", array("id" => $this->getAttribute(            // line 22
-$context["user"], "id", array()))), "html", null, true);
-            // line 23
-            echo "\">
-\t\t\t\t\t\t";
-            // line 24
+            echo "                        <tr>
+                            <td>";
+            // line 22
             echo twig_escape_filter($this->env, $this->getAttribute($context["user"], "name", array()), "html", null, true);
-            echo "
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>";
-            // line 27
+            echo "</td>
+                            <td>";
+            // line 23
             echo twig_escape_filter($this->env, twig_jsonencode_filter($this->getAttribute($context["user"], "roles", array())), "html", null, true);
             echo "</td>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<a href=\"#\" class=\"pull-left btn btn-link js-delete-user\"
-\t\t\t\t\t\tdata-url=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("delete_user", array("id" => $this->getAttribute(            // line 31
+                            <td>
+                                <a href=\"";
+            // line 25
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_edit", array("id" => $this->getAttribute(            // line 26
 $context["user"], "id", array()))), "html", null, true);
+            // line 27
+            echo "\" class=\"btn btn-xs btn-success\">
+\t\t\t\t\t\t\t\t\t<span class=\"fa fa-pencil\"></span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t&nbsp;
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-xs btn-success js-delete-user\"
+\t\t\t\t\t\t\t\tdata-url=\"";
             // line 32
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("delete_user", array("id" => $this->getAttribute(            // line 33
+$context["user"], "id", array()))), "html", null, true);
+            // line 34
             echo "\"
-\t\t\t\t\t\t>
-\t\t\t\t\t\t\t<span class=\"fa fa-trash\"></span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t";
+\t\t\t\t\t\t\t\t>
+\t\t\t\t\t\t\t\t\t<span class=\"fa fa-trash\"></span>
+\t\t\t\t\t\t\t\t</a>
+                            </td>
+                        </tr>
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
-        echo "\t\t</tbody>
-\t</table>
+        // line 41
+        echo "                </table>
+            </div>
+        </div>
+    </div>
 ";
         
-        $__internal_67c3eaa825b21a68d66656f4f57882665a4da68a8a307814c3162a3febaebc2a->leave($__internal_67c3eaa825b21a68d66656f4f57882665a4da68a8a307814c3162a3febaebc2a_prof);
+        $__internal_2364325fa5bc5c7aae5c6559d5e3b7ba0660186c8047a60c0313689490e89eeb->leave($__internal_2364325fa5bc5c7aae5c6559d5e3b7ba0660186c8047a60c0313689490e89eeb_prof);
 
         
-        $__internal_fc0e68e16ad15bd408fb956bd89f4edb2ee30f510977921ef452e046e1e5b654->leave($__internal_fc0e68e16ad15bd408fb956bd89f4edb2ee30f510977921ef452e046e1e5b654_prof);
+        $__internal_08715d47beeef312a304bce238cd3648596d563257049742894f26bcb16fb8e9->leave($__internal_08715d47beeef312a304bce238cd3648596d563257049742894f26bcb16fb8e9_prof);
 
     }
 
-    // line 43
+    // line 49
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b9c446cd74c0089414d97640a714aa3d9323fc7c90a8a7d2727911e24fcf33f1 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b9c446cd74c0089414d97640a714aa3d9323fc7c90a8a7d2727911e24fcf33f1->enter($__internal_b9c446cd74c0089414d97640a714aa3d9323fc7c90a8a7d2727911e24fcf33f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_7404a14d9af39f2fbd487b60aacea75679539e02619e1bbd11e8c8cdd49926e6 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_7404a14d9af39f2fbd487b60aacea75679539e02619e1bbd11e8c8cdd49926e6->enter($__internal_7404a14d9af39f2fbd487b60aacea75679539e02619e1bbd11e8c8cdd49926e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_9cb235ac6ce458bc5d8e0ae56c59657594367c3d9aba392ba52d1275f3862273 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9cb235ac6ce458bc5d8e0ae56c59657594367c3d9aba392ba52d1275f3862273->enter($__internal_9cb235ac6ce458bc5d8e0ae56c59657594367c3d9aba392ba52d1275f3862273_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_dcd1124675e50694c2653d9c575a969365eacd4b5810158b58290e5c38e872c8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_dcd1124675e50694c2653d9c575a969365eacd4b5810158b58290e5c38e872c8->enter($__internal_dcd1124675e50694c2653d9c575a969365eacd4b5810158b58290e5c38e872c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 44
+        // line 50
         echo "\t";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
@@ -139,7 +143,7 @@ $context["user"], "id", array()))), "html", null, true);
             \$table.find('.js-delete-user').on('click',function(e){
                 e.preventDefault();
 
-                \$(this).addClass('text-danger');
+                // \$(this).addClass('text-danger');
                 \$(this).find('.fa')
                     .removeClass('fa-trash')
 \t\t\t\t\t.addClass('fa-spinner')
@@ -159,10 +163,10 @@ $context["user"], "id", array()))), "html", null, true);
 \t</script>
 ";
         
-        $__internal_9cb235ac6ce458bc5d8e0ae56c59657594367c3d9aba392ba52d1275f3862273->leave($__internal_9cb235ac6ce458bc5d8e0ae56c59657594367c3d9aba392ba52d1275f3862273_prof);
+        $__internal_dcd1124675e50694c2653d9c575a969365eacd4b5810158b58290e5c38e872c8->leave($__internal_dcd1124675e50694c2653d9c575a969365eacd4b5810158b58290e5c38e872c8_prof);
 
         
-        $__internal_b9c446cd74c0089414d97640a714aa3d9323fc7c90a8a7d2727911e24fcf33f1->leave($__internal_b9c446cd74c0089414d97640a714aa3d9323fc7c90a8a7d2727911e24fcf33f1_prof);
+        $__internal_7404a14d9af39f2fbd487b60aacea75679539e02619e1bbd11e8c8cdd49926e6->leave($__internal_7404a14d9af39f2fbd487b60aacea75679539e02619e1bbd11e8c8cdd49926e6_prof);
 
     }
 
@@ -178,7 +182,7 @@ $context["user"], "id", array()))), "html", null, true);
 
     public function getDebugInfo()
     {
-        return array (  131 => 44,  122 => 43,  110 => 39,  98 => 32,  96 => 31,  95 => 30,  89 => 27,  83 => 24,  80 => 23,  78 => 22,  77 => 21,  73 => 19,  69 => 18,  53 => 5,  50 => 4,  41 => 3,  11 => 1,);
+        return array (  135 => 50,  126 => 49,  112 => 41,  100 => 34,  98 => 33,  97 => 32,  90 => 27,  88 => 26,  87 => 25,  82 => 23,  78 => 22,  75 => 21,  71 => 20,  57 => 9,  50 => 4,  41 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -194,44 +198,50 @@ $context["user"], "id", array()))), "html", null, true);
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-<h2>Listado de Usuarios</h2>
-\t<a href=\"{{ path('register_user') }}\">
-\t\t<span class=\"btn btn-link fa fa-plus-circle\"></span>
-\t</a>
+    <div class=\"container\">
+        <div class=\"row\">
 
-\t<table class=\"table table-striped js-user-table\">
-\t\t<thead>
-\t\t\t<tr>
-\t\t\t\t<th>Nombre</th>
-\t\t\t\t<th>Ocupacion</th>
-\t\t\t\t<th>Acciones</th>
-\t\t\t</tr>
-\t\t</thead>
-\t\t<tbody>
-\t\t\t{% for user in users  %}
-\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<a href=\"{{ path('show_user',{
-\t\t\t\t\t\t\t'id' : user.id
-\t\t\t\t\t\t}) }}\">
-\t\t\t\t\t\t{{ user.name }}
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>{{ user.roles|json_encode }}</td>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<a href=\"#\" class=\"pull-left btn btn-link js-delete-user\"
-\t\t\t\t\t\tdata-url=\"{{ path('delete_user',{
-\t\t\t\t\t\t\t'id': user.id
-\t\t\t\t\t\t}) }}\"
-\t\t\t\t\t\t>
-\t\t\t\t\t\t\t<span class=\"fa fa-trash\"></span>
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t{% endfor %}
-\t\t</tbody>
-\t</table>
+            <div class=\"col-xs-12\">
+                <div class=\"pull-right\" style=\"margin-bottom: 10px; margin-top: 20px;\">
+                    <a href=\"{{ path('register_user') }}\" class=\"btn btn-primary pull-right\">Insertar <span class=\"fa fa-plus-circle\"></span></a>
+                </div>
+
+                <h1>Usuarios</h1>
+
+                <table class=\"table table-striped js-user-table\">
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Ocupación</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.roles|json_encode }}</td>
+                            <td>
+                                <a href=\"{{ path('user_edit',{
+\t\t\t\t\t\t\t\t\t'id' : user.id
+\t\t\t\t\t\t\t\t}) }}\" class=\"btn btn-xs btn-success\">
+\t\t\t\t\t\t\t\t\t<span class=\"fa fa-pencil\"></span>
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t&nbsp;
+\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-xs btn-success js-delete-user\"
+\t\t\t\t\t\t\t\tdata-url=\"{{ path('delete_user',{
+\t\t\t\t\t\t\t\t\t'id' : user.id
+\t\t\t\t\t\t\t\t})  }}\"
+\t\t\t\t\t\t\t\t>
+\t\t\t\t\t\t\t\t\t<span class=\"fa fa-trash\"></span>
+\t\t\t\t\t\t\t\t</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
+
 
 {% block javascripts %}
 \t{{ parent() }}
@@ -243,7 +253,7 @@ $context["user"], "id", array()))), "html", null, true);
             \$table.find('.js-delete-user').on('click',function(e){
                 e.preventDefault();
 
-                \$(this).addClass('text-danger');
+                // \$(this).addClass('text-danger');
                 \$(this).find('.fa')
                     .removeClass('fa-trash')
 \t\t\t\t\t.addClass('fa-spinner')

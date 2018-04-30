@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+
+	{{ form_errors(form) }}
+	{{ form_row(form.contratNumber) }}
+	{{ form_row(form.numberAccount) }}
+	{{ form_row(form.startAt) }}
+	{{ form_row(form.endAt) }}
+
+<button class="btn btn-primary" type="submit" formnovalidate>Guardar!</button>
+
+{{ form_end(form) }}

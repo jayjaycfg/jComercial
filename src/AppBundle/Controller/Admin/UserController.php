@@ -10,8 +10,8 @@ namespace AppBundle\Controller\Admin;
 
 
 use AppBundle\Entity\User;
-use AppBundle\Form\UserEditForm;
-use AppBundle\Form\UserRegisterForm;
+use AppBundle\Form\User\UserEditForm;
+use AppBundle\Form\User\UserRegisterForm;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -38,6 +38,12 @@ class UserController extends Controller
                 $this->addFlash(
                     'success',
                     'Usuario insertado con exito'
+                );
+                 return $this->redirectToRoute("list_users");
+            }elseif ($form->isSubmitted()){
+                $this->addFlash(
+                    'error',
+                    'Hubo un problema en la creación del usuario'
                 );
             }
         return $this->render("admin/user/register.html.twig",[
@@ -111,9 +117,14 @@ class UserController extends Controller
                     'Usuario editado con exito'
                 );
 
-                    return $this->redirectToRoute('user_edit',[
+                    return $this->redirectToRoute('list_users',[
                         'id'=> $user->getId()
                     ]);
+            }elseif ($form->isSubmitted()){
+                $this->addFlash(
+                    'error',
+                    'Hubo un problema en la edición del usuario'
+                );
             }
             return $this->render("admin/user/edit.html.twig",[
                 'userForm' => $form->createView()

@@ -137,6 +137,42 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        elseif (0 === strpos($pathinfo, '/contrato/cliente')) {
+            // list_client
+            if ('/contrato/cliente/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::listAction',  '_route' => 'list_client',);
+            }
+
+            // new_client
+            if ('/contrato/cliente/new' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::newCliente',  '_route' => 'new_client',);
+            }
+
+            // edit_client
+            if (preg_match('#^/contrato/cliente/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_client')), array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::editCliente',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/contrato/proveedor')) {
+            // list_proveedor
+            if ('/contrato/proveedor/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::listAction',  '_route' => 'list_proveedor',);
+            }
+
+            // new_proveedor
+            if ('/contrato/proveedor/new' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::newProveedor',  '_route' => 'new_proveedor',);
+            }
+
+            // edit_proveedor
+            if (preg_match('#^/contrato/proveedor/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_proveedor')), array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::editProveedor',));
+            }
+
+        }
+
         // security_login
         if ('/login' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginAction',  '_route' => 'security_login',);

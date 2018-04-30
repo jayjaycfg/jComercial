@@ -4,3 +4,18 @@ AppBundle\Entity\User:
         lastName: <lastName()>
         plainPassword: 'foo'
         roles: ['ROLE_ADMIN']
+
+AppBundle\Entity\cliente:
+    cliente_{1..10}:
+        clientNumber: <numberBetween(10,50)>
+        startAt: <dateTimeBetween('-3 mounths','now')>
+        endAt: <dateTimeBetween('-3 years', 'now')>
+        description: <paragraph()>
+        fact: factura<current()>
+
+AppBundle\Entity\Proveedor:
+    proveedor_{1..10}:
+        contratNumber: <numberBetween(10,50)>
+        numberAccount: <numberBetween(1000,10000)>
+        startAt: <dateTimeBetween('-3 mounths','now')>
+        endAt: <dateTimeBetween('-3 years', 'now')>

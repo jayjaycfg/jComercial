@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{#{% block body %}#}
+	{#<h2>Listado de Contratos</h2>#}
+	{#<a href="{{ path('new_client') }}">#}
+		{#<span class="btn btn-link fa fa-plus-circle"></span>#}
+	{#</a>#}
+
+	{#<table class="table table-striped js-user-table">#}
+		{#<thead>#}
+		{#<tr>#}
+			{#<th>Consecutivo</th>#}
+			{#<th>Fecha de Inicio</th>#}
+			{#<th>Fecha de Vencimiento</th>#}
+			{##}
+			{#No necesito un campo de factura pues el contrato es el optional side de la relacion#}
+			{#En el owning side debo tener un campo cliente como llave foranea#}
+			{##}
+			{#<th>Factura(No la necesito, MY BAD)</th>#}
+			{#<th>Descripcion</th>#}
+			{#<th>Acciones</th>#}
+		{#</tr>#}
+		{#</thead>#}
+		{#<tbody>#}
+		{#{% for client in clients  %}#}
+			{#<tr>#}
+				{#<td>{{ client.clientNumber }}</td>#}
+				{#<td>{{ client.startAt |date('Y-m-d') }}</td>#}
+				{#<td>{{ client.endAt |date('Y-m-d') }}</td>#}
+				{#<td>MY BAD</td>#}
+				{#<td>{{ client.description }}</td>#}
+				{#<td>#}
+					{#<a href="{{ path('edit_client',{#}
+						{#'id' : client.id#}
+					{#}) }}"#}
+					   {#class="pull-right btn btn-link">#}
+						{#<span class="fa fa-pencil"></span>#}
+					{#</a>#}
+				{#</td>#}
+			{#</tr>#}
+		{#{% endfor %}#}
+		{#</tbody>#}
+	{#</table>#}
+{#{% endblock %}#}
+
+{#{% block javascripts %}#}
+	{#{{ parent() }}#}
+	{#<script>#}
+        {#$(document).ready(function(){#}
+
+            {#var $table = $('.js-user-table');#}
+
+            {#$table.find('.js-delete-user').on('click',function(e){#}
+                {#e.preventDefault();#}
+
+                {#$(this).addClass('text-danger');#}
+                {#$(this).find('.fa')#}
+                    {#.removeClass('fa-trash')#}
+                    {#.addClass('fa-spinner')#}
+                    {#.addClass('fa-spin');#}
+
+                {#var $row = $(this).closest('tr');#}
+
+                {#$.ajax({#}
+                    {#url: $(this).data('url'),#}
+                    {#method: 'DELETE'#}
+
+                {#}).done(function () {#}
+                    {#$row.fadeOut();#}
+                {#});#}
+            {#});#}
+        {#});#}
+	{#</script>#}
+{#{% endblock %}#}
+
+
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="pull-right" style="margin-bottom: 10px; margin-top: 20px;">
+                    <a href="{{ path('new_client') }}" class="btn btn-primary pull-right">Insertar <span class="fa fa-plus-circle"></span></a>
+                </div>
+
+                <h1>Contratos con clientes</h1>
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>Consecutivo</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Vencimiento</th>
+						<th>Descripción</th>
+						<th>&nbsp;</th>
+                    </tr>
+                    {% for client in clients %}
+                        <tr>
+                            <td>{{ client.clientNumber }}</td>
+                            <td>{{ client.startAt|date('Y-m-d') }}</td>
+							<td>{{ client.endAt|date('Y-m-d') }}</td>
+							<td>{{ client.description }}</td>
+                            <td>
+                                <a href="{{ path('edit_client',{
+									'id' : client.id
+								}) }}" class="btn btn-xs btn-success">
+									<span class="fa fa-pencil"></span>
+								</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

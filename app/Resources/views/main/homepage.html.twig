@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-	<h1 class="page-header text-center">Bienvenido a jComercial</h1>
+
+	<h1 class="page-header text-center">
+		Bienvenido
+		{{ app.user ? app.user.name : ' ' }}
+		a jComercial</h1>
 {% endblock %}

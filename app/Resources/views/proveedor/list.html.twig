@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="pull-right" style="margin-bottom: 10px; margin-top: 20px;">
+					<a href="{{ path('new_proveedor') }}" class="btn btn-primary pull-right">Insertar <span class="fa fa-plus-circle"></span></a>
+				</div>
+
+				<h1>Contratos con proveedores</h1>
+
+				<table class="table table-striped">
+					<tr>
+						<th>Consecutivo</th>
+						<th>Cuenta Bancaria</th>
+						<th>Fecha de Inicio</th>
+						<th>Fecha de Vencimiento</th>
+						<th>&nbsp;</th>
+					</tr>
+					{% for proveedor in proveedores %}
+						<tr>
+							<td>{{ proveedor.contratNumber}}</td>
+							<td>{{ proveedor.numberAccount }}</td>
+							<td>{{ proveedor.startAt|date('Y-m-d') }}</td>
+							<td>{{ proveedor.endAt|date('Y-m-d') }}</td>
+							<td>
+							<a href="{{ path('edit_proveedor',{
+									'id' : proveedor.id
+								}) }}" class="btn btn-xs btn-success">
+									<span class="fa fa-pencil"></span>
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
