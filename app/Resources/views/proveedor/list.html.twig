@@ -21,7 +21,13 @@
 					</tr>
 					{% for proveedor in proveedores %}
 						<tr>
-							<td>{{ proveedor.contratNumber}}</td>
+							<td>
+								<a href="{{ path('show_proveedor',{
+									'id' : proveedor.id
+								}) }}">
+								{{ proveedor.contratNumber}}
+								</a>
+							</td>
 							<td>{{ proveedor.numberAccount }}</td>
 							<td>{{ proveedor.startAt|date('Y-m-d') }}</td>
 							<td>{{ proveedor.endAt|date('Y-m-d') }}</td>

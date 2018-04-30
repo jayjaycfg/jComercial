@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1>Factura:</h1>
+
+				<table class="table">
+					<tbody>
+					<tr>
+						<th>Importe en CUC</th>
+						<td>{{ factura.importeCuc }}</td>
+					</tr>
+					<tr>
+						<th>Importe en CUP</th>
+						<td>{{ factura.importeCup }}</td>
+					</tr>
+					<tr>
+						<th>Contato</th>
+						<td>{{ factura.contratos|json_encode }}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

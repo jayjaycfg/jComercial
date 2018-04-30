@@ -19,3 +19,9 @@ AppBundle\Entity\Proveedor:
         numberAccount: <numberBetween(1000,10000)>
         startAt: <dateTimeBetween('-3 mounths','now')>
         endAt: <dateTimeBetween('-3 years', 'now')>
+
+AppBundle\Entity\Factura:
+    factura_{1..10}:
+        importeCuc: <numberBetween(1000,50000)>
+        importeCup: <numberBetween(1000,10000)>
+        contratos: [Contrato<current()>]

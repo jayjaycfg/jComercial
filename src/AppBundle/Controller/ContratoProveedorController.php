@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class ContratoProveedorController extends Controller
 {
     /**
-     * @Route("/contrato/proveedor/list", name="list_proveedor")
+     * @Route("/contrato/proveedor/listar", name="list_proveedor")
      */
     public function listAction()
     {
@@ -29,7 +29,7 @@ class ContratoProveedorController extends Controller
     }
 
     /**
-     * @Route("/contrato/proveedor/new", name="new_proveedor")
+     * @Route("/contrato/proveedor/nuevo", name="new_proveedor")
      */
     public function newProveedor(Request $request)
     {
@@ -61,7 +61,26 @@ class ContratoProveedorController extends Controller
     }
 
     /**
-     * @Route("/contrato/proveedor/{id}/edit", name="edit_proveedor")
+     * @Route("/contrato/proveedor/{id}", name="show_proveedor")
+     */
+    public function showAction(Proveedor $proveedor)
+    {
+        $em  = $this->getDoctrine()->getManager();
+
+        $proveedor = $em->getRepository('AppBundle:Proveedor')
+            ->findOneBy([
+                'id' => $proveedor->getId()
+            ]);
+        if(!$proveedor){
+            return $this->createNotFoundException("No se encontró el proveedor solicitado");
+        }
+            return $this->render('proveedor/show.html.twig',[
+                'proveedor' =>$proveedor
+            ]);
+    }
+
+    /**
+     * @Route("/contrato/proveedor/{id}/editar", name="edit_proveedor")
      */
     public function editProveedor(Request $request, Proveedor $proveedor)
     {

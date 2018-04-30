@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1>
+					Contrato con Proveedor:
+				</h1>
+
+				<table class="table">
+					<tbody>
+					<tr>
+						<th>Consecutivo</th>
+						<td>{{ proveedor.contratNumber }}</td>
+					</tr>
+					<tr>
+						<th>Cuenta Bancaria</th>
+						<td>{{ proveedor.numberAccount }}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Inicio</th>
+						<td>{{ proveedor.startAt|date('Y-m-d') }}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Vencimiento</th>
+						<td>{{ proveedor.endAt|date('Y-m-d') }}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

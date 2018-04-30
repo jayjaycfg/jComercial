@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1>Contrato con cliente:</h1>
+
+				<table class="table">
+					<tbody>
+					<tr>
+						<th>Consecutivo</th>
+						<td>{{ cliente.clientNumber }}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Inicio</th>
+						<td>{{ cliente.startAt|date('Y-m-d') }}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Vencimiento</th>
+						<td>{{ cliente.endAt|date('Y-m-d') }}</td>
+					</tr>
+					<tr>
+						<th>Descripción</th>
+						<td>{{ cliente.description }}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

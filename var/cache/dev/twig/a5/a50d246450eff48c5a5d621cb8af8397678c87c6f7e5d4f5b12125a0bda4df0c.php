@@ -21,29 +21,29 @@ class __TwigTemplate_9e104870322f27bcab0df86ee1cdc6859177fa01c088683f0cd44063b28
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9210653ca37c0a7cc5d09f82b090a748da1c299fb09e3ec0ed458f22d810adfd = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9210653ca37c0a7cc5d09f82b090a748da1c299fb09e3ec0ed458f22d810adfd->enter($__internal_9210653ca37c0a7cc5d09f82b090a748da1c299fb09e3ec0ed458f22d810adfd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "proveedor/list.html.twig"));
+        $__internal_4c06f9e8c6b46366ee832419c4ce24c4aa14ee04e5e0ab707405f155c29826eb = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_4c06f9e8c6b46366ee832419c4ce24c4aa14ee04e5e0ab707405f155c29826eb->enter($__internal_4c06f9e8c6b46366ee832419c4ce24c4aa14ee04e5e0ab707405f155c29826eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "proveedor/list.html.twig"));
 
-        $__internal_c9fc8cc0c3f52c4490980b1fe558fa5343d32ff0296ad441c427a1d7b4a17198 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c9fc8cc0c3f52c4490980b1fe558fa5343d32ff0296ad441c427a1d7b4a17198->enter($__internal_c9fc8cc0c3f52c4490980b1fe558fa5343d32ff0296ad441c427a1d7b4a17198_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "proveedor/list.html.twig"));
+        $__internal_238bc08420c6d835c08fbb9b575b21d9787ebfdb23e63041b71cad27c87f8dca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_238bc08420c6d835c08fbb9b575b21d9787ebfdb23e63041b71cad27c87f8dca->enter($__internal_238bc08420c6d835c08fbb9b575b21d9787ebfdb23e63041b71cad27c87f8dca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "proveedor/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9210653ca37c0a7cc5d09f82b090a748da1c299fb09e3ec0ed458f22d810adfd->leave($__internal_9210653ca37c0a7cc5d09f82b090a748da1c299fb09e3ec0ed458f22d810adfd_prof);
+        $__internal_4c06f9e8c6b46366ee832419c4ce24c4aa14ee04e5e0ab707405f155c29826eb->leave($__internal_4c06f9e8c6b46366ee832419c4ce24c4aa14ee04e5e0ab707405f155c29826eb_prof);
 
         
-        $__internal_c9fc8cc0c3f52c4490980b1fe558fa5343d32ff0296ad441c427a1d7b4a17198->leave($__internal_c9fc8cc0c3f52c4490980b1fe558fa5343d32ff0296ad441c427a1d7b4a17198_prof);
+        $__internal_238bc08420c6d835c08fbb9b575b21d9787ebfdb23e63041b71cad27c87f8dca->leave($__internal_238bc08420c6d835c08fbb9b575b21d9787ebfdb23e63041b71cad27c87f8dca_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3b012f14aeeab57e24442249b87665f71850ce336e8b758163401ba620be7a74 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3b012f14aeeab57e24442249b87665f71850ce336e8b758163401ba620be7a74->enter($__internal_3b012f14aeeab57e24442249b87665f71850ce336e8b758163401ba620be7a74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2ac5fd9b08329e2fecf60371d3e65339d613f07a95b107f37fdbeffae6a8dc33 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_2ac5fd9b08329e2fecf60371d3e65339d613f07a95b107f37fdbeffae6a8dc33->enter($__internal_2ac5fd9b08329e2fecf60371d3e65339d613f07a95b107f37fdbeffae6a8dc33_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_bf5e6c5055e0d00d7fd9a83efae5bfef3a19e94b6999d0b80f5a82d20dd8a157 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_bf5e6c5055e0d00d7fd9a83efae5bfef3a19e94b6999d0b80f5a82d20dd8a157->enter($__internal_bf5e6c5055e0d00d7fd9a83efae5bfef3a19e94b6999d0b80f5a82d20dd8a157_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_553d9044a6f8caeca526286568728cbc39b53c3653729544c7e409714770a82b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_553d9044a6f8caeca526286568728cbc39b53c3653729544c7e409714770a82b->enter($__internal_553d9044a6f8caeca526286568728cbc39b53c3653729544c7e409714770a82b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<div class=\"container\">
@@ -74,28 +74,37 @@ class __TwigTemplate_9e104870322f27bcab0df86ee1cdc6859177fa01c088683f0cd44063b28
         foreach ($context['_seq'] as $context["_key"] => $context["proveedor"]) {
             // line 23
             echo "\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td>";
-            // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($context["proveedor"], "contratNumber", array()), "html", null, true);
-            echo "</td>
-\t\t\t\t\t\t\t<td>";
+\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t<a href=\"";
             // line 25
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_proveedor", array("id" => $this->getAttribute(            // line 26
+$context["proveedor"], "id", array()))), "html", null, true);
+            // line 27
+            echo "\">
+\t\t\t\t\t\t\t\t";
+            // line 28
+            echo twig_escape_filter($this->env, $this->getAttribute($context["proveedor"], "contratNumber", array()), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</td>
+\t\t\t\t\t\t\t<td>";
+            // line 31
             echo twig_escape_filter($this->env, $this->getAttribute($context["proveedor"], "numberAccount", array()), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 26
+            // line 32
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["proveedor"], "startAt", array()), "Y-m-d"), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 27
+            // line 33
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["proveedor"], "endAt", array()), "Y-m-d"), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_proveedor", array("id" => $this->getAttribute(            // line 30
+            // line 35
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("edit_proveedor", array("id" => $this->getAttribute(            // line 36
 $context["proveedor"], "id", array()))), "html", null, true);
-            // line 31
+            // line 37
             echo "\" class=\"btn btn-xs btn-success\">
 \t\t\t\t\t\t\t\t\t<span class=\"fa fa-pencil\"></span>
 \t\t\t\t\t\t\t\t</a>
@@ -106,17 +115,17 @@ $context["proveedor"], "id", array()))), "html", null, true);
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['proveedor'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 43
         echo "\t\t\t\t</table>
 \t\t\t</div>
 \t\t</div>
 \t</div>
 ";
         
-        $__internal_bf5e6c5055e0d00d7fd9a83efae5bfef3a19e94b6999d0b80f5a82d20dd8a157->leave($__internal_bf5e6c5055e0d00d7fd9a83efae5bfef3a19e94b6999d0b80f5a82d20dd8a157_prof);
+        $__internal_553d9044a6f8caeca526286568728cbc39b53c3653729544c7e409714770a82b->leave($__internal_553d9044a6f8caeca526286568728cbc39b53c3653729544c7e409714770a82b_prof);
 
         
-        $__internal_3b012f14aeeab57e24442249b87665f71850ce336e8b758163401ba620be7a74->leave($__internal_3b012f14aeeab57e24442249b87665f71850ce336e8b758163401ba620be7a74_prof);
+        $__internal_2ac5fd9b08329e2fecf60371d3e65339d613f07a95b107f37fdbeffae6a8dc33->leave($__internal_2ac5fd9b08329e2fecf60371d3e65339d613f07a95b107f37fdbeffae6a8dc33_prof);
 
     }
 
@@ -132,7 +141,7 @@ $context["proveedor"], "id", array()))), "html", null, true);
 
     public function getDebugInfo()
     {
-        return array (  110 => 37,  99 => 31,  97 => 30,  96 => 29,  91 => 27,  87 => 26,  83 => 25,  79 => 24,  76 => 23,  72 => 22,  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  119 => 43,  108 => 37,  106 => 36,  105 => 35,  100 => 33,  96 => 32,  92 => 31,  86 => 28,  83 => 27,  81 => 26,  80 => 25,  76 => 23,  72 => 22,  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -168,7 +177,13 @@ $context["proveedor"], "id", array()))), "html", null, true);
 \t\t\t\t\t</tr>
 \t\t\t\t\t{% for proveedor in proveedores %}
 \t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t<td>{{ proveedor.contratNumber}}</td>
+\t\t\t\t\t\t\t<td>
+\t\t\t\t\t\t\t\t<a href=\"{{ path('show_proveedor',{
+\t\t\t\t\t\t\t\t\t'id' : proveedor.id
+\t\t\t\t\t\t\t\t}) }}\">
+\t\t\t\t\t\t\t\t{{ proveedor.contratNumber}}
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t<td>{{ proveedor.numberAccount }}</td>
 \t\t\t\t\t\t\t<td>{{ proveedor.startAt|date('Y-m-d') }}</td>
 \t\t\t\t\t\t\t<td>{{ proveedor.endAt|date('Y-m-d') }}</td>

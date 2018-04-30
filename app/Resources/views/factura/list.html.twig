@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="pull-right" style="margin-bottom: 10px; margin-top: 20px;">
+					<a href="{{ path('new_factura') }}" class="btn btn-primary pull-right">Insertar <span class="fa fa-plus-circle"></span></a>
+				</div>
+
+				<h1>Facturas</h1>
+
+				<table class="table table-striped">
+					<tr>
+						<th>ID</th>
+						<th>Importe en CUC</th>
+						<th>Importe en CUP</th>
+						<th>Contratos</th>
+						<th>&nbsp;</th>
+					</tr>
+					{% for factura in facturas %}
+						<tr>
+							<td>
+								<a href="{{ path('show_factura',{
+									'id' : factura.id
+								}) }}">
+									{{ factura.id }}
+								</a>
+							</td>
+							<td>{{ factura.importeCuc |number_format}}</td>
+							<td>{{ factura.importeCup |number_format}}</td>
+							<td>{{ factura.contratos|json_encode }}</td>
+							<td>
+								<a href="{{ path('edit_factura',{
+									'id' : factura.id
+								}) }}" class="btn btn-xs btn-success">
+									<span class="fa fa-pencil"></span>
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+

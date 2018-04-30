@@ -139,17 +139,22 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         elseif (0 === strpos($pathinfo, '/contrato/cliente')) {
             // list_client
-            if ('/contrato/cliente/list' === $pathinfo) {
+            if ('/contrato/cliente/listar' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::listAction',  '_route' => 'list_client',);
             }
 
             // new_client
-            if ('/contrato/cliente/new' === $pathinfo) {
+            if ('/contrato/cliente/nuevo' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::newCliente',  '_route' => 'new_client',);
             }
 
+            // show_client
+            if (preg_match('#^/contrato/cliente/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_client')), array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::showAction',));
+            }
+
             // edit_client
-            if (preg_match('#^/contrato/cliente/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/contrato/cliente/(?P<id>[^/]++)/editar$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_client')), array (  '_controller' => 'AppBundle\\Controller\\ContratoClienteController::editCliente',));
             }
 
@@ -157,18 +162,46 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         elseif (0 === strpos($pathinfo, '/contrato/proveedor')) {
             // list_proveedor
-            if ('/contrato/proveedor/list' === $pathinfo) {
+            if ('/contrato/proveedor/listar' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::listAction',  '_route' => 'list_proveedor',);
             }
 
             // new_proveedor
-            if ('/contrato/proveedor/new' === $pathinfo) {
+            if ('/contrato/proveedor/nuevo' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::newProveedor',  '_route' => 'new_proveedor',);
             }
 
+            // show_proveedor
+            if (preg_match('#^/contrato/proveedor/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_proveedor')), array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::showAction',));
+            }
+
             // edit_proveedor
-            if (preg_match('#^/contrato/proveedor/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+            if (preg_match('#^/contrato/proveedor/(?P<id>[^/]++)/editar$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_proveedor')), array (  '_controller' => 'AppBundle\\Controller\\ContratoProveedorController::editProveedor',));
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/factura')) {
+            // list_factura
+            if ('/factura/listar' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\FacturaController::listAction',  '_route' => 'list_factura',);
+            }
+
+            // new_factura
+            if ('/factura/nueva' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\FacturaController::newAction',  '_route' => 'new_factura',);
+            }
+
+            // show_factura
+            if (preg_match('#^/factura/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'show_factura')), array (  '_controller' => 'AppBundle\\Controller\\FacturaController::showAction',));
+            }
+
+            // edit_factura
+            if (preg_match('#^/factura/(?P<id>[^/]++)/editar$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit_factura')), array (  '_controller' => 'AppBundle\\Controller\\FacturaController::editAction',));
             }
 
         }
