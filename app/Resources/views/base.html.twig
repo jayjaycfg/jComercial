@@ -19,10 +19,14 @@
 			{% if is_granted('ROLE_ADMIN') %}
 			<li><a href="{{ path('list_users') }}">Usuarios</a></li>
 			{% else %}
-			<li>
-				<a href="{{ path('list_client') }}">Contratos
+			<li class="dropdown">
+				<a href="#" class="dropdown" data-toggle="dropdown">Contrato
 					<span class="caret"></span>
 				</a>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('list_client') }}">Cliente</a></li>
+                    <li><a href="{{ path('list_proveedor') }}">Proveedor</a></li>
+                </ul>
 			</li>
 			<li><a href="{{ path('list_factura') }}">Facturas</a></li>
             {% endif %}
@@ -56,6 +60,7 @@
         </div>
         {% block javascripts %}
             <script src="{{ asset('js/jquery-2.1.4.min.js') }}"></script>
+            <script src="{{ asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
             <script src="{{ asset('js/main.js') }}"></script>
         {% endblock %}
     </body>

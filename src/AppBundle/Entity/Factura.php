@@ -19,57 +19,50 @@ class Factura
      */
     private $id;
     /**
-     * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Campo Obligatorio")
+     * @ORM\Column(type="string")
      */
-    private $importeCup;
+    private $programa;
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $descripcionDelGasto;
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Campo Obligatorio")
      */
-    private $importeCuc;
-
-    private $contratos = [];
-
-//    public function __construct()
-//    {
-//        $this->contratos = new ArrayCollection();
-//    }
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function getImporteCup()
-    {
-        return $this->importeCup;
-    }
-
-    public function setImporteCup($importeCup)
-    {
-        $this->importeCup = $importeCup;
-    }
-
-    public function getImporteCuc()
-    {
-        return $this->importeCuc;
-    }
-
-    public function setImporteCuc($importeCuc)
-    {
-        $this->importeCuc = $importeCuc;
-    }
-
-    public function getContratos()
-    {
-        return $this->contratos;
-    }
+    private $cantidad;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $precio;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $participante;
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $fechaAt;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isCancelada;
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $explicacionPorCancelada;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     */
+    private $usuario;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Contrato")
+     */
+    private $contrato;
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa")
+     */
+    private $empresa;
 
 
-    public function setContratos($contratos)
-    {
-        $this->contratos = $contratos;
-    }
 
 }

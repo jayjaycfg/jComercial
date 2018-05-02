@@ -5,5 +5,4 @@ parameters:
     database_name: jComercial
     database_user: root
     database_password: root
-
     secret: 748d2a8f3364c3103482bdddd9cfadc90911ae2e

@@ -50,6 +50,7 @@ final class Versions
   'symfony/polyfill-util' => 'v1.5.0@67925d1cf0b84bd234a83bebf26d4eb281744c6d',
   'symfony/swiftmailer-bundle' => 'v2.6.3@11555c338f3c367b0a1bd2f024a53aa813f4ce00',
   'symfony/symfony' => 'v3.3.10@cfef3b2d505ae4375b17032bd03ed9a3da4b7b43',
+  'tecnick.com/tcpdf' => '6.2.17@64fc19439863e1b1314487a72a74d9bfd0b55a53',
   'twig/twig' => 'v1.35.0@daa657073e55b0a78cce8fdd22682fddecc6385f',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
@@ -60,7 +61,7 @@ final class Versions
   'nelmio/alice' => 'v3.1.1@bd42498862813b1d0b4de8c43877a0a33611f2b4',
   'sensio/generator-bundle' => 'v3.1.6@128bc5dabc91ca40b7445f094968dd70ccd58305',
   'symfony/phpunit-bridge' => 'v3.3.10@6e40d1c8bc4037edf3852c0b29fdd2923c4e2133',
-  'audioxtreme/heroquest' => '1.0.0.0@',
+  'audioxtreme/heroquest' => '9999999-dev@4d023d533b3054d3ac024b14cd5705c10acbb0c6',
 );
 
     private function __construct()
