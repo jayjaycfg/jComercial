@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1>Contrato:
+					{% if contrato %}
+						{{ contrato.id }}
+					{% endif %}
+				</h1>
+				<table class="table">
+					<tbody>
+					<tr>
+						<th>Numero de Orden</th>
+						<td>{{ contrato.noDeOrden }}</td>
+					</tr>
+					<tr>
+						<th>Tipo de Contrato</th>
+						<td>{{ contrato.tipoDeContrato |json_encode}}</td>
+					</tr>
+					<tr>
+						<th>Valor inicial en MN</th>
+						<td>{{ contrato.valorInicialMn |number_format}}</td>
+					</tr>
+					<tr>
+						<th>Valor inicial en CUC</th>
+						<td>{{ contrato.valorInicialCuc |number_format}}</td>
+					</tr>
+					<tr>
+						<th>Suplemento</th>
+						<td>{{ contrato.isSuplemento }}</td>
+					</tr>
+					<tr>
+						<th>Acta de Firmado</th>
+						<td>{{ contrato.actaDeFirmado }}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Otorgamiento</th>
+						<td>{{ contrato.fechaDeOtorgamiento |date('Y-m-d')}}</td>
+					</tr>
+					<tr>
+						<th>Fecha de Vencimiento</th>
+						<td>{{ contrato.fechaDeVencimiento |date('Y-m-d')}}</td>
+					</tr>
+					<tr>
+						<th>Telefono</th>
+						<td>{{ contrato.telefono }}</td>
+					</tr>
+					<tr>
+						<th>Correo</th>
+						<td>{{ contrato.correo }}</td>
+					</tr>
+					<tr>
+						<th>Cliente</th>
+						<td>{{ contrato.isCliente }}</td>
+					</tr>
+					<tr>
+						<th>Proveedor</th>
+						<td>{{ contrato.isProveedor }}</td>
+					</tr>
+					<tr>
+						<th>Ministerio</th>
+						<td>{{ contrato.ministerio |json_encode}}</td>
+					</tr>
+					{#<tr>#}
+						{#<th>Empresa</th>#}
+						{#{% for empresa in contrato.empresas %}#}
+						{#<td>{{ empresa.nombre }}</td>#}
+						{#{% endfor %}#}
+					{#</tr>#}
+
+					{#{% if factura.isCancelada == 'true' %}#}
+						{#<tr>#}
+							{#<th>Cancelada</th>#}
+							{#<td>Factura cancelada</td>#}
+						{#</tr>#}
+						{#<tr>#}
+							{#<th>Explicacion</th>#}
+							{#<td>{{ factura.explicacionPorCancelada }}</td>#}
+						{#</tr>#}
+					{#{% endif %}#}
+					{#<tr>#}
+						{#<th>Usuario</th>#}
+						{#<td>{{ factura.usuario }}</td>#}
+					{#</tr>#}
+					{#<tr>#}
+						{#<th>Contrato</th>#}
+						{#<td>{{ factura.contrato }}</td>#}
+					{#</tr>#}
+					{#<tr>#}
+						{#<th>Empresa</th>#}
+						{#<td>{{ factura.empresa }}</td>#}
+					{#</tr>#}
+					</tbody>
+				</table>
+			</div>
+			<div class="col-xs-4">
+				<h3>Empresa:</h3>
+				<ul class="list-group">
+				{% for empresa in contrato.empresas %}
+					<li class="list-group-item">
+						{{ empresa.nombre }}
+					</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

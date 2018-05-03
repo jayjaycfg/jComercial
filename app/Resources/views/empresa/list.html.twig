@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+
+			<div class="col-xs-12">
+				<div class="pull-right" style="margin-bottom: 10px; margin-top: 20px;">
+					<a href="{{ path('crear_empresa') }}" class="btn btn-primary pull-right">Insertar <span class="fa fa-plus-circle"></span></a>
+				</div>
+
+				<h1>Empresas</h1>
+
+				<table class="table table-striped js-table">
+					<tr>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Domicilio Legal</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+					</tr>
+					{% for empresa in empresas %}
+						<tr>
+							<td>
+								<a href="{{ path('mostrar_empresa',{
+									'id' : empresa.id
+								}) }}">
+									{{ empresa.id }}
+								</a>
+							</td>
+							<td>{{ empresa.nombre}}</td>
+							<td>{{ empresa.domicilioLegal}}</td>
+
+
+							<td>
+								<a href="{{ path('modificar_empresa',{
+									'id' : empresa.id
+								}) }}" class="pull-right btn-xs btn-link">
+									<span class="fa fa-pencil"></span>
+								</a>
+							</td>
+							<td>
+								<a href="#" class="pull-right btn-xs btn-link">
+									<span class="fa fa-save"></span>
+
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</div>
+		</div>
+	</div>
+{% endblock %}

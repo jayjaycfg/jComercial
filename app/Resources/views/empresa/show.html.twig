@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8">
+				<h1>Empresa:
+					{% if empresa %}
+						{{ empresa.id }}
+					{% endif %}
+				</h1>
+				<table class="table">
+					<tbody>
+					<tr>
+						<th>Nombre</th>
+						<td>{{ empresa.nombre }}</td>
+					</tr>
+					<tr>
+						<th>Domicilio Legal</th>
+						<td>{{ empresa.domicilioLegal }}</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+			{#<div class="col-xs-4">#}
+				{#<h3>Empresa:</h3>#}
+				{#<ul class="list-group">#}
+					{#{% for empresa in contrato.empresas %}#}
+						{#<li class="list-group-item">#}
+							{#{{ empresa.nombre }}#}
+						{#</li>#}
+					{#{% endfor %}#}
+				{#</ul>#}
+			{#</div>#}
+		</div>
+	</div>
+{% endblock %}

@@ -8,6 +8,7 @@ use AppBundle\Form\FacturaFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class FacturaController extends Controller
 {
@@ -107,5 +108,26 @@ class FacturaController extends Controller
             return $this->render('factura/edit.html.twig',[
                 'form' => $form->createView()
             ]);
+    }
+
+    /**
+     * @Route("/factura/{id}/cancelar", name="cancelada")
+     */
+    public function canceladaAction(Factura $factura)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $factura = $em->getRepository('AppBundle:Factura')
+            ->findOneBy([
+                'id' => $factura->getId()
+            ]);
+            if($factura){
+            $factura->setIsCancelada(1);
+            $em->persist($factura);
+            $em->flush();
+            $this->addFlash(
+                'success',
+                'Factura cancelada con exito');
+            }
+            return new Response(null,204);
     }
 }

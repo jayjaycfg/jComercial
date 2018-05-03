@@ -14,7 +14,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  * @ORM\Table(name="user")
  */
 class User implements UserInterface
@@ -132,4 +132,8 @@ class User implements UserInterface
 
     }
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

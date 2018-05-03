@@ -394,6 +394,12 @@
     <service id="AppBundle\Controller\Admin\UserController" class="AppBundle\Controller\Admin\UserController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="AppBundle\Controller\ContratoController" class="AppBundle\Controller\ContratoController" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="AppBundle\Controller\EmpresaController" class="AppBundle\Controller\EmpresaController" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="AppBundle\Controller\FacturaController" class="AppBundle\Controller\FacturaController" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -409,6 +415,12 @@
       <argument type="service" id="security.user_password_encoder.generic"/>
     </service>
     <service id="AppBundle\Form\ClientFormType" class="AppBundle\Form\ClientFormType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="AppBundle\Form\ContratoFormType" class="AppBundle\Form\ContratoFormType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="AppBundle\Form\EmpresaFormType" class="AppBundle\Form\EmpresaFormType" public="false" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="AppBundle\Form\FacturaFormType" class="AppBundle\Form\FacturaFormType" public="false" autowire="true" autoconfigure="true">
@@ -448,7 +460,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.e3ce185c1c54d0ed5405e92218fa40d0"/>
+      <argument type="service" id="service_locator.bae5324f213bba7de8928bebb22247ee"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -616,7 +628,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <argument>/var/www/html/jComercial/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -626,7 +638,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -745,7 +757,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.1285ae9462aefc1eea99aae0121ef1ce"/>
+      <argument type="service" id="service_locator.f01a6424f36c0fd3f663d4693ba7d299"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -2214,12 +2226,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5aea2be6ad6038.96384874</argument>
+      <argument>5aeb5c1d8786b3.06641454</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5aea2be6ad6038.96384874</argument>
+      <argument>5aeb5c1d8786b3.06641454</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3118,6 +3130,10 @@
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\Admin\UserController" class="AppBundle\Controller\Admin\UserController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\Admin\UserController" class="AppBundle\Controller\Admin\UserController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\ContratoController" class="AppBundle\Controller\ContratoController" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\ContratoController" class="AppBundle\Controller\ContratoController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\EmpresaController" class="AppBundle\Controller\EmpresaController" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Controller\EmpresaController" class="AppBundle\Controller\EmpresaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\FacturaController" class="AppBundle\Controller\FacturaController" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\FacturaController" class="AppBundle\Controller\FacturaController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\MainController" class="AppBundle\Controller\MainController" autowire="true" abstract="true"/>
@@ -3126,6 +3142,10 @@
     <service id="abstract.instanceof.AppBundle\Controller\SecurityController" class="AppBundle\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ClientFormType" class="AppBundle\Form\ClientFormType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Form\ClientFormType" class="AppBundle\Form\ClientFormType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ContratoFormType" class="AppBundle\Form\ContratoFormType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\ContratoFormType" class="AppBundle\Form\ContratoFormType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\EmpresaFormType" class="AppBundle\Form\EmpresaFormType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.AppBundle\Form\EmpresaFormType" class="AppBundle\Form\EmpresaFormType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\FacturaFormType" class="AppBundle\Form\FacturaFormType" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Form\FacturaFormType" class="AppBundle\Form\FacturaFormType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.AppBundle\Form\ProveedorFormType" class="AppBundle\Form\ProveedorFormType" public="false" autowire="true" abstract="true"/>
@@ -3152,6 +3172,38 @@
         <argument key="user" type="service" id="autowired.AppBundle\Entity\User"/>
       </argument>
     </service>
+    <service id="service_locator.cd962c33a7c4bcc5d994557230debeb5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.9aa7d49db198743371c5f4341de87602" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="contrato" type="service" id="autowired.AppBundle\Entity\Contrato"/>
+      </argument>
+    </service>
+    <service id="service_locator.e4cd9207a3fe70a5d1cb4d0e9afc4302" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="contrato" type="service" id="autowired.AppBundle\Entity\Contrato"/>
+      </argument>
+    </service>
+    <service id="service_locator.4e3e09bd53119557e8927caca37699d2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.33e8bb5ca11365e81979512b31b80d32" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="empresa" type="service" id="autowired.AppBundle\Entity\Empresa"/>
+      </argument>
+    </service>
+    <service id="service_locator.057ea1bc16591929548bcd1d4270dce0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="empresa" type="service" id="autowired.AppBundle\Entity\Empresa"/>
+      </argument>
+    </service>
     <service id="service_locator.0774e05f1b1b907833b86d807ce38958" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
@@ -3168,25 +3220,37 @@
         <argument key="factura" type="service" id="autowired.AppBundle\Entity\Factura"/>
       </argument>
     </service>
-    <service id="service_locator.e3ce185c1c54d0ed5405e92218fa40d0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.bae5324f213bba7de8928bebb22247ee" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Controller\Admin\UserController:deleteAction" type="service" id="service_locator.40ab8eb65fa46813665f8d3ddd462e65"/>
         <argument key="AppBundle\Controller\Admin\UserController:editAction" type="service" id="service_locator.dfce7140d24a01ced527c02aa624839e"/>
         <argument key="AppBundle\Controller\Admin\UserController:showAction" type="service" id="service_locator.40ab8eb65fa46813665f8d3ddd462e65"/>
+        <argument key="AppBundle\Controller\ContratoController:editarAction" type="service" id="service_locator.9aa7d49db198743371c5f4341de87602"/>
+        <argument key="AppBundle\Controller\ContratoController:mostrarAction" type="service" id="service_locator.e4cd9207a3fe70a5d1cb4d0e9afc4302"/>
+        <argument key="AppBundle\Controller\EmpresaController:editarAction" type="service" id="service_locator.33e8bb5ca11365e81979512b31b80d32"/>
+        <argument key="AppBundle\Controller\EmpresaController:mostrarAction" type="service" id="service_locator.057ea1bc16591929548bcd1d4270dce0"/>
+        <argument key="AppBundle\Controller\FacturaController:canceladaAction" type="service" id="service_locator.1eae6cd689f811bb1c12a750447a6ee4"/>
         <argument key="AppBundle\Controller\FacturaController:editAction" type="service" id="service_locator.2e62ed8732c2f55b985fed3eaf3b6a89"/>
         <argument key="AppBundle\Controller\FacturaController:showAction" type="service" id="service_locator.1eae6cd689f811bb1c12a750447a6ee4"/>
         <argument key="AppBundle\Controller\Admin\UserController::deleteAction" type="service" id="service_locator.40ab8eb65fa46813665f8d3ddd462e65"/>
         <argument key="AppBundle\Controller\Admin\UserController::editAction" type="service" id="service_locator.dfce7140d24a01ced527c02aa624839e"/>
         <argument key="AppBundle\Controller\Admin\UserController::showAction" type="service" id="service_locator.40ab8eb65fa46813665f8d3ddd462e65"/>
+        <argument key="AppBundle\Controller\ContratoController::editarAction" type="service" id="service_locator.9aa7d49db198743371c5f4341de87602"/>
+        <argument key="AppBundle\Controller\ContratoController::mostrarAction" type="service" id="service_locator.e4cd9207a3fe70a5d1cb4d0e9afc4302"/>
+        <argument key="AppBundle\Controller\EmpresaController::editarAction" type="service" id="service_locator.33e8bb5ca11365e81979512b31b80d32"/>
+        <argument key="AppBundle\Controller\EmpresaController::mostrarAction" type="service" id="service_locator.057ea1bc16591929548bcd1d4270dce0"/>
+        <argument key="AppBundle\Controller\FacturaController::canceladaAction" type="service" id="service_locator.1eae6cd689f811bb1c12a750447a6ee4"/>
         <argument key="AppBundle\Controller\FacturaController::editAction" type="service" id="service_locator.2e62ed8732c2f55b985fed3eaf3b6a89"/>
         <argument key="AppBundle\Controller\FacturaController::showAction" type="service" id="service_locator.1eae6cd689f811bb1c12a750447a6ee4"/>
       </argument>
     </service>
-    <service id="service_locator.1285ae9462aefc1eea99aae0121ef1ce" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.f01a6424f36c0fd3f663d4693ba7d299" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="AppBundle\Form\ClientFormType" type="service" id="AppBundle\Form\ClientFormType"/>
+        <argument key="AppBundle\Form\ContratoFormType" type="service" id="AppBundle\Form\ContratoFormType"/>
+        <argument key="AppBundle\Form\EmpresaFormType" type="service" id="AppBundle\Form\EmpresaFormType"/>
         <argument key="AppBundle\Form\FacturaFormType" type="service" id="AppBundle\Form\FacturaFormType"/>
         <argument key="AppBundle\Form\ProveedorFormType" type="service" id="AppBundle\Form\ProveedorFormType"/>
         <argument key="AppBundle\Form\User\LoginForm" type="service" id="AppBundle\Form\User\LoginForm"/>
@@ -3373,6 +3437,8 @@
       </argument>
     </service>
     <service id="autowired.AppBundle\Entity\User" class="AppBundle\Entity\User" public="false" autowire="true"/>
+    <service id="autowired.AppBundle\Entity\Contrato" class="AppBundle\Entity\Contrato" public="false" autowire="true"/>
+    <service id="autowired.AppBundle\Entity\Empresa" class="AppBundle\Entity\Empresa" public="false" autowire="true"/>
     <service id="autowired.AppBundle\Entity\Factura" class="AppBundle\Entity\Factura" public="false" autowire="true"/>
     <service id="service_locator.39e66930232432ca5ba91e98fdd8a17b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -3403,7 +3469,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>4uM+zkfGH-</argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <argument>/var/www/html/jComercial/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3411,7 +3477,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>Y1Sam3Eql8</argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <argument>/var/www/html/jComercial/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3419,7 +3485,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>QM1zqiBqYR</argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <argument>/var/www/html/jComercial/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3427,7 +3493,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false" lazy="true">
       <argument>R6RBiDpz2w</argument>
       <argument>0</argument>
-      <argument>MVRNU4BBtbufhdnvMkQWig</argument>
+      <argument>IFNNSqf6imI-mADpYdea-0</argument>
       <argument>/var/www/html/jComercial/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>

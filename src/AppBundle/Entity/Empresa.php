@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\EmpresaRepository")
  * @ORM\Table(name="empresa")
  */
 class Empresa
@@ -33,6 +33,9 @@ class Empresa
      */
     private $domicilioLegal;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Contrato", mappedBy="empresas")
+     */
     private $contratos;
 
     public function __construct()
@@ -65,5 +68,35 @@ class Empresa
         $this->domicilioLegal = $domicilioLegal;
     }
 
+    /**
+     * @return ArrayCollection|Contrato[]
+     */
+    public function getContratos()
+    {
+        return $this->contratos;
+    }
+
+    public function setContratos($contratos)
+    {
+        $this->contratos = $contratos;
+    }
+
+    public function addContrato(Contrato $contrato)
+    {
+        if($this->contratos->contains($contrato)){
+            return null;
+        }
+        $this->contratos[] = $contrato;
+    }
+
+    public function removeContrato(Contrato $contrato)
+    {
+        $this->contratos->removeElement($contrato);
+    }
+
+    public function __toString()
+    {
+        return $this->getNombre();
+    }
 
 }

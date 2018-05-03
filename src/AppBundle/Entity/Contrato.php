@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ContratoRepository")
  * @ORM\Table(name="contrato")
  */
 class Contrato
@@ -29,17 +29,17 @@ class Contrato
      */
     private $noDeOrden;
     /**
-     * @ORM\Column(type="json_array")
+     * @ORM\Column(type="string")
      */
     private $tipoDeContrato = [];
     /**
      * @ORM\Column(type="integer")
      */
-    private $valorInicialMn;
+    private $valorInicialMn = 0 ;
     /**
      * @ORM\Column(type="integer")
      */
-    private $valorInicialCuc;
+    private $valorInicialCuc = 0;
     /**
      * @ORM\Column(type="boolean")
      */
@@ -73,11 +73,11 @@ class Contrato
      */
     private $isProveedor;
     /**
-     * @ORM\Column(type="json_array")
+     * @ORM\Column(type="string")
      */
     private $ministerio = [];
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Empresa")
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Empresa", inversedBy="contratos")
      */
     private $empresas;
 
@@ -220,6 +220,35 @@ class Contrato
         $this->ministerio = $ministerio;
     }
 
+    /**
+     * @return ArrayCollection|Empresa[]
+     */
+    public function getEmpresas()
+    {
+        return $this->empresas;
+    }
 
+    public function setEmpresas($empresas)
+    {
+        $this->empresas = $empresas;
+    }
+
+    public function addEmpresa(Empresa $empresa)
+    {
+        if($this->empresas->contains($empresa)){
+            return null;
+        }
+        $this->empresas[] =   $empresa;
+    }
+
+    public function removeEmpresa(Empresa $empresa)
+    {
+        $this->empresas->removeElement($empresa);
+    }
+
+    public function __toString()
+    {
+        return $this->getCorreo();
+    }
 
 }

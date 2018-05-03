@@ -1,0 +1,42 @@
+AppBundle\Entity\User:
+    user_{1..10}:
+        name: <name()>
+        lastName: <lastName()>
+        plainPassword: 'foo'
+        roles: ['ROLE_ADMIN']
+
+AppBundle\Entity\Empresa:
+    empresa_{1..10}:
+        nombre: <name()>
+        domicilioLegal: <paragraph()>
+
+AppBundle\Entity\Contrato:
+    contrato_{1..10}:
+        noDeOrden: <numberBetween(100,200)>
+        tipoDeContrato: 'Tipo1'
+        valorInicialMn: <numberBetween(1000,5000)>
+        valorInicialCuc: <numberBetween(100,500)>
+        isSuplemento: <boolean(75)>
+        actaDeFirmado: <sentence()>
+        fechaDeOtorgamiento: <dateTimeBetween('-6 years', 'now')>
+        fechaDeVencimiento: <dateTimeBetween('-3 years', 'now')>
+        telefono: <numberBetween(435100,435299)>
+        correo: 'correo'
+        isCliente: <boolean(80)>
+        isProveedor: <boolean(20)>
+        ministerio: 'ministerio1'
+        empresas: '3x @empresa_*'
+
+AppBundle\Entity\Factura:
+    factura_{1..10}:
+        programa: 'programa1'
+        descripcionDelGasto: <sentence()>
+        cantidad: <numberBetween(1,6)>
+        precio: <numberBetween(2,8)>
+        participante: <name()>
+        fechaAt: <dateTimeBetween('yesterday', 'now')>
+        isCancelada: <boolean(25)>
+        explicacionPorCancelada: <paragraph()>
+        usuario: '@user_*'
+        contrato: '@contrato_*'
+        empresa: '@empresa_*'

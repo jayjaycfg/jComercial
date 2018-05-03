@@ -7,8 +7,9 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\FacturaRepository")
  * @ORM\Table(name="factura")
+ *
  */
 class Factura
 {
@@ -45,11 +46,11 @@ class Factura
     /**
      * @ORM\Column(type="boolean")
      */
-    private $isCancelada;
+    private $isCancelada = false;
     /**
      * @ORM\Column(type="text")
      */
-    private $explicacionPorCancelada;
+    private $explicacionPorCancelada = null;
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
      */
@@ -62,6 +63,129 @@ class Factura
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa")
      */
     private $empresa;
+
+//    public function __construct()
+//    {
+//        $this->usuario = new ArrayCollection();
+//        $this->contrato = new ArrayCollection();
+//        $this->empresa  = new ArrayCollection();
+//    }
+
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getPrograma()
+    {
+        return $this->programa;
+    }
+
+    public function setPrograma($programa)
+    {
+        $this->programa = $programa;
+    }
+
+    public function getDescripcionDelGasto()
+    {
+        return $this->descripcionDelGasto;
+    }
+
+    public function setDescripcionDelGasto($descripcionDelGasto)
+    {
+        $this->descripcionDelGasto = $descripcionDelGasto;
+    }
+
+    public function getCantidad()
+    {
+        return $this->cantidad;
+    }
+
+    public function setCantidad($cantidad)
+    {
+        $this->cantidad = $cantidad;
+    }
+
+    public function getPrecio()
+    {
+        return $this->precio;
+    }
+
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
+    }
+
+    public function getParticipante()
+    {
+        return $this->participante;
+    }
+
+    public function setParticipante($participante)
+    {
+        $this->participante = $participante;
+    }
+
+    public function getFechaAt()
+    {
+        return $this->fechaAt;
+    }
+
+    public function setFechaAt($fechaAt)
+    {
+        $this->fechaAt = $fechaAt;
+    }
+
+    public function getisCancelada()
+    {
+        return $this->isCancelada;
+    }
+
+    public function setIsCancelada($isCancelada)
+    {
+        $this->isCancelada = $isCancelada;
+    }
+
+    public function getExplicacionPorCancelada()
+    {
+        return $this->explicacionPorCancelada;
+    }
+
+    public function setExplicacionPorCancelada($explicacionPorCancelada)
+    {
+        $this->explicacionPorCancelada = $explicacionPorCancelada;
+    }
+
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    }
+
+    public function getContrato()
+    {
+        return $this->contrato;
+    }
+
+    public function setContrato($contrato)
+    {
+        $this->contrato = $contrato;
+    }
+
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }
+
+    public function setEmpresa($empresa)
+    {
+        $this->empresa = $empresa;
+    }
 
 
 

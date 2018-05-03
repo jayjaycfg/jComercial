@@ -11,12 +11,21 @@
 
 				<h1>Facturas</h1>
 
-				<table class="table table-striped">
+				<table class="table table-striped js-table">
 					<tr>
 						<th>ID</th>
-						<th>Importe en CUC</th>
-						<th>Importe en CUP</th>
-						<th>Contratos</th>
+						<th>Usuario</th>
+						<th>Contrato</th>
+						<th>Empresa</th>
+						<th>Programa</th>
+						<th>Descripcion</th>
+						<th>Cantidad</th>
+						<th>Precio</th>
+						<th>Participante</th>
+						<th>Fecha</th>
+						<th>Cancelada</th>
+						<th>Explicacion</th>
+						<th>&nbsp;</th>
 						<th>&nbsp;</th>
 					</tr>
 					{% for factura in facturas %}
@@ -28,14 +37,32 @@
 									{{ factura.id }}
 								</a>
 							</td>
-							<td>{{ factura.importeCuc |number_format}}</td>
-							<td>{{ factura.importeCup |number_format}}</td>
-							<td>{{ factura.contratos|json_encode }}</td>
+							<td>{{ factura.usuario}}</td>
+							<td>{{ factura.contrato}}</td>
+							<td>{{ factura.empresa }}</td>
+							<td>{{ factura.programa |json_encode}}</td>
+							<td>{{ factura.descripcionDelGasto}}</td>
+							<td>{{ factura.cantidad }}</td>
+							<td>{{ factura.precio}}</td>
+							<td>{{ factura.participante}}</td>
+							<td>{{ factura.fechaAt |date('Y-m-d') }}</td>
+							<td>{{ factura.isCancelada}}</td>
+							<td>{{ factura.explicacionPorCancelada}}</td>
 							<td>
 								<a href="{{ path('edit_factura',{
 									'id' : factura.id
-								}) }}" class="btn-xs btn-primary">
+								}) }}" class="pull-right btn-xs btn-link">
 									<span class="fa fa-pencil"></span>
+								</a>
+							</td>
+							<td>
+								<a href="#" class="pull-right btn-xs btn-link js-cancelar-factura"
+								data-url = "{{ path('cancelada',{
+									'id' : factura.id
+								}) }}"
+								>
+									<span class="fa fa-close"></span>
+
 								</a>
 							</td>
 						</tr>
@@ -47,3 +74,21 @@
 {% endblock %}
 
 
+{% block javascripts %}
+	{{ parent() }}
+	<script>
+		$(document).ready(function () {
+			var $table = $('.js-table');
+			$table.find('.js-cancelar-factura').on('click',function (e) {
+				e.preventDefault();
+				var $row = $(this).closest('tr');
+
+				$.ajax({
+					url: $(this).data('url')
+				}).done(function () {
+					$row.fadeOut();
+                });
+            });
+        });
+	</script>
+{% endblock %}

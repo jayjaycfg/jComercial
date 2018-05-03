@@ -4,24 +4,64 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-8">
-				<h1>Factura:</h1>
-
+				<h1>Factura:
+				{% if factura %}
+					{{ factura.id }}
+				{% endif %}
+				</h1>
 				<table class="table">
 					<tbody>
 					<tr>
-						<th>Importe en CUC</th>
-						<td>{{ factura.importeCuc }}</td>
+						<th>Programa</th>
+						<td>{{ factura.programa }}</td>
 					</tr>
 					<tr>
-						<th>Importe en CUP</th>
-						<td>{{ factura.importeCup }}</td>
+						<th>Descripcion del gasto</th>
+						<td>{{ factura.descripcionDelGasto }}</td>
 					</tr>
 					<tr>
-						<th>Contato</th>
-						<td>{{ factura.contratos|json_encode }}</td>
+						<th>Cantidad</th>
+						<td>{{ factura.cantidad }}</td>
+					</tr>
+					<tr>
+						<th>Precio</th>
+						<td>{{ factura.precio }}</td>
+					</tr>
+					<tr>
+						<th>Participante</th>
+						<td>{{ factura.participante }}</td>
+					</tr>
+					<tr>
+						<th>Fecha</th>
+						<td>{{ factura.fechaAt |date('Y-m-d') }}</td>
+					</tr>
+					{% if factura.isCancelada == 'true' %}
+					<tr>
+						<th>Cancelada</th>
+						<td>Factura cancelada</td>
+					</tr>
+					<tr>
+						<th>Explicacion</th>
+						<td>{{ factura.explicacionPorCancelada }}</td>
+					</tr>
+					{% endif %}
+					<tr>
+						<th>Usuario</th>
+						<td>{{ factura.usuario }}</td>
+					</tr>
+					<tr>
+						<th>Contrato</th>
+						<td>{{ factura.contrato }}</td>
+					</tr>
+					<tr>
+						<th>Empresa</th>
+						<td>{{ factura.empresa }}</td>
 					</tr>
 					</tbody>
 				</table>
+			</div>
+			<div class="col-xs-4">
+				<h3>Empresa:</h3>
 			</div>
 		</div>
 	</div>
