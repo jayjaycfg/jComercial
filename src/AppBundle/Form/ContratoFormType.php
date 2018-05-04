@@ -55,7 +55,7 @@ class ContratoFormType extends AbstractType
                    'MINED' => 'MINED'
                ]
            ])
-           ->add('empresas',EntityType::class,[
+           ->add('empresa',EntityType::class,[
                'placeholder' => 'Selecciona una empresa',
                'class' => Empresa::class,
                'query_builder' => function($repository){

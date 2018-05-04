@@ -16,6 +16,7 @@
 						<th>ID</th>
 						<th>Nombre</th>
 						<th>Domicilio Legal</th>
+						<th>Contratos</th>
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
 					</tr>
@@ -30,8 +31,7 @@
 							</td>
 							<td>{{ empresa.nombre}}</td>
 							<td>{{ empresa.domicilioLegal}}</td>
-
-
+							<td>{{ empresa.contratos |length }}</td>
 							<td>
 								<a href="{{ path('modificar_empresa',{
 									'id' : empresa.id

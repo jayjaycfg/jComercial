@@ -25,7 +25,7 @@ AppBundle\Entity\Contrato:
         isCliente: <boolean(80)>
         isProveedor: <boolean(20)>
         ministerio: 'ministerio1'
-        empresas: '3x @empresa_*'
+        empresa: '@empresa_*'
 
 AppBundle\Entity\Factura:
     factura_{1..10}:
@@ -36,7 +36,7 @@ AppBundle\Entity\Factura:
         participante: <name()>
         fechaAt: <dateTimeBetween('yesterday', 'now')>
         isCancelada: <boolean(25)>
-        explicacionPorCancelada: <paragraph()>
-        usuario: '@user_*'
-        contrato: '@contrato_*'
+        explicacionPorCancelada: '50%?  Explicaciones : Nada '
+        usuario: user<current()>
         empresa: '@empresa_*'
+        contrato: '@contrato_*'

@@ -63,46 +63,35 @@
 						<th>Ministerio</th>
 						<td>{{ contrato.ministerio |json_encode}}</td>
 					</tr>
-					{#<tr>#}
-						{#<th>Empresa</th>#}
-						{#{% for empresa in contrato.empresas %}#}
-						{#<td>{{ empresa.nombre }}</td>#}
-						{#{% endfor %}#}
-					{#</tr>#}
-
-					{#{% if factura.isCancelada == 'true' %}#}
-						{#<tr>#}
-							{#<th>Cancelada</th>#}
-							{#<td>Factura cancelada</td>#}
-						{#</tr>#}
-						{#<tr>#}
-							{#<th>Explicacion</th>#}
-							{#<td>{{ factura.explicacionPorCancelada }}</td>#}
-						{#</tr>#}
-					{#{% endif %}#}
-					{#<tr>#}
-						{#<th>Usuario</th>#}
-						{#<td>{{ factura.usuario }}</td>#}
-					{#</tr>#}
-					{#<tr>#}
-						{#<th>Contrato</th>#}
-						{#<td>{{ factura.contrato }}</td>#}
-					{#</tr>#}
-					{#<tr>#}
-						{#<th>Empresa</th>#}
-						{#<td>{{ factura.empresa }}</td>#}
-					{#</tr>#}
 					</tbody>
 				</table>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-2">
 				<h3>Empresa:</h3>
 				<ul class="list-group">
-				{% for empresa in contrato.empresas %}
 					<li class="list-group-item">
-						{{ empresa.nombre }}
+						<a href="{{ path('mostrar_empresa',{
+							'id' : contrato.empresa.id
+						}) }}">
+						{{ contrato.empresa.nombre }}
+						</a>
 					</li>
-				{% endfor %}
+				</ul>
+			</div>
+			<div class="col-xs-2">
+				<h3>Facturas Asociadas:</h3>
+				<ul class="list-group">
+					{% for factura in contrato.facturas %}
+					<li class="list-group-item">
+
+							<a href="{{ path('show_factura',{
+								'id' : factura.id
+							}) }}">
+								{{ factura.id }}
+							</a>
+
+					</li>
+					{% endfor %}
 				</ul>
 			</div>
 		</div>

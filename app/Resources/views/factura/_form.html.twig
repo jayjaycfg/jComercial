@@ -1,7 +1,9 @@
 {{ form_start(form) }}
 	{{ form_errors(form) }}
 
-	{{ form_row(form.usuario) }}
+	{#{{ form_row(form.usuario,{#}
+		{#'value' : '{{ app.user.name }}'#}
+	{#}) }}#}
 	{{ form_row(form.contrato) }}
 	{{ form_row(form.empresa) }}
 	{{ form_row(form.programa) }}
@@ -9,8 +11,9 @@
 	{{ form_row(form.cantidad) }}
 	{{ form_row(form.precio) }}
 	{{ form_row(form.participante) }}
-	{{ form_row(form.fechaAt) }}
+	{#{{ form_row(form.fechaAt) }}#}
 	{{ form_row(form.isCancelada) }}
+
 	{{ form_row(form.explicacionPorCancelada) }}
 
 <button type="submit" class="btn btn-primary" formnovalidate>Añadir</button>

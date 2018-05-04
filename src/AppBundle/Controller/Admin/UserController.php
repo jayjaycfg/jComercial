@@ -14,15 +14,22 @@ use AppBundle\Form\User\UserEditForm;
 use AppBundle\Form\User\UserRegisterForm;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+/**
+ * Class UserController
+ * @package AppBundle\Controller\Admin
+ * @Route("/admin")
+ * @Security("is_granted('ROLE_ADMIN')")
+ */
 class UserController extends Controller
 {
 
     /**
-     * @Route("/admin/user/register", name="register_user")
+     * @Route("/user/register", name="register_user")
      */
     public function registerAction(Request $request)
     {
@@ -54,7 +61,7 @@ class UserController extends Controller
 
 
     /**
-     * @Route("/admin/user/delete/{id}", name="delete_user")
+     * @Route("/user/delete/{id}", name="delete_user")
      * @Method("DELETE")
      */
     public function deleteAction(User $user)
@@ -67,7 +74,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/list", name="list_users")
+     * @Route("/user/list", name="list_users")
      */
     public function listAction()
     {
@@ -75,6 +82,13 @@ class UserController extends Controller
 
         $users = $em->getRepository('AppBundle:User')
             ->findAll();
+         if(!$users){
+             $this->addFlash(
+                 'error',
+                 'No se encontraron usuarios en el sistema, por favor inserte uno nuevo'
+             );
+             return $this->redirectToRoute('register_user');
+         }
 
         return $this->render("admin/user/list.html.twig",[
             'users' => $users
@@ -82,7 +96,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/{id}", name="show_user")
+     * @Route("/user/{id}", name="show_user")
      */
     public function showAction(User $user)
     {
@@ -98,7 +112,7 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/admin/user/{id}/edit", name="user_edit")
+     * @Route("/user/{id}/edit", name="user_edit")
      */
     public function editAction(User $user, Request $request)
     {

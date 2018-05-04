@@ -15,11 +15,11 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5c8295563ad5053f5814bd86800b42d44d11305d10ddb1407aecbf29d3857fcf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_5c8295563ad5053f5814bd86800b42d44d11305d10ddb1407aecbf29d3857fcf->enter($__internal_5c8295563ad5053f5814bd86800b42d44d11305d10ddb1407aecbf29d3857fcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
+        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff->enter($__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
 
-        $__internal_07fc09eb44eb369bad92c04d0e0ff9be5c922ee1a28f0a091b9bfd16c3a0229e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_07fc09eb44eb369bad92c04d0e0ff9be5c922ee1a28f0a091b9bfd16c3a0229e->enter($__internal_07fc09eb44eb369bad92c04d0e0ff9be5c922ee1a28f0a091b9bfd16c3a0229e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
+        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6->enter($__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
 
         // line 1
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
@@ -78,18 +78,18 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
         echo "
 \t\t\t\t\t";
         // line 15
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "empresas", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "empresa", array()), 'row');
         echo "
 
-<button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Edit</button>
+<button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Añadir</button>
 ";
         // line 18
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         
-        $__internal_5c8295563ad5053f5814bd86800b42d44d11305d10ddb1407aecbf29d3857fcf->leave($__internal_5c8295563ad5053f5814bd86800b42d44d11305d10ddb1407aecbf29d3857fcf_prof);
+        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff->leave($__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff_prof);
 
         
-        $__internal_07fc09eb44eb369bad92c04d0e0ff9be5c922ee1a28f0a091b9bfd16c3a0229e->leave($__internal_07fc09eb44eb369bad92c04d0e0ff9be5c922ee1a28f0a091b9bfd16c3a0229e_prof);
+        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6->leave($__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6_prof);
 
     }
 
@@ -132,9 +132,9 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
 \t\t\t\t\t{{ form_row(form.isCliente) }}
 \t\t\t\t\t{{ form_row(form.isProveedor) }}
 \t\t\t\t\t{{ form_row(form.ministerio) }}
-\t\t\t\t\t{{ form_row(form.empresas) }}
+\t\t\t\t\t{{ form_row(form.empresa) }}
 
-<button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Edit</button>
+<button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Añadir</button>
 {{ form_end(form) }}", ":contrato:_form.html.twig", "/var/www/html/jComercial/app/Resources/views/contrato/_form.html.twig");
     }
 }

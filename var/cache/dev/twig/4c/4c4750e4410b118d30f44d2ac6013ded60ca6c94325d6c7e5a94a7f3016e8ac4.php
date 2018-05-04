@@ -21,29 +21,29 @@ class __TwigTemplate_3a0921638b3261e60c15008516733aceaa09003f06946bf66b65899b449
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_18339f969ae5ad4d7294a386eb9a3a9f5d240540f364df78405784c20f41fef9 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_18339f969ae5ad4d7294a386eb9a3a9f5d240540f364df78405784c20f41fef9->enter($__internal_18339f969ae5ad4d7294a386eb9a3a9f5d240540f364df78405784c20f41fef9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":empresa:list.html.twig"));
+        $__internal_d8e5e68ca23fe6add33fa1cf43452bc0aef8d5acacfb8265e355c275bcf1a42a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d8e5e68ca23fe6add33fa1cf43452bc0aef8d5acacfb8265e355c275bcf1a42a->enter($__internal_d8e5e68ca23fe6add33fa1cf43452bc0aef8d5acacfb8265e355c275bcf1a42a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":empresa:list.html.twig"));
 
-        $__internal_8a0d9a621f77e7524cdac02c6ff56ec088a823236591c459cf5119bbd8766c00 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8a0d9a621f77e7524cdac02c6ff56ec088a823236591c459cf5119bbd8766c00->enter($__internal_8a0d9a621f77e7524cdac02c6ff56ec088a823236591c459cf5119bbd8766c00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":empresa:list.html.twig"));
+        $__internal_20b43a473b211ed2d975c6850f9ad26eb5328dec26b871d36e5ce9723ec21ddc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_20b43a473b211ed2d975c6850f9ad26eb5328dec26b871d36e5ce9723ec21ddc->enter($__internal_20b43a473b211ed2d975c6850f9ad26eb5328dec26b871d36e5ce9723ec21ddc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":empresa:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_18339f969ae5ad4d7294a386eb9a3a9f5d240540f364df78405784c20f41fef9->leave($__internal_18339f969ae5ad4d7294a386eb9a3a9f5d240540f364df78405784c20f41fef9_prof);
+        $__internal_d8e5e68ca23fe6add33fa1cf43452bc0aef8d5acacfb8265e355c275bcf1a42a->leave($__internal_d8e5e68ca23fe6add33fa1cf43452bc0aef8d5acacfb8265e355c275bcf1a42a_prof);
 
         
-        $__internal_8a0d9a621f77e7524cdac02c6ff56ec088a823236591c459cf5119bbd8766c00->leave($__internal_8a0d9a621f77e7524cdac02c6ff56ec088a823236591c459cf5119bbd8766c00_prof);
+        $__internal_20b43a473b211ed2d975c6850f9ad26eb5328dec26b871d36e5ce9723ec21ddc->leave($__internal_20b43a473b211ed2d975c6850f9ad26eb5328dec26b871d36e5ce9723ec21ddc_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3af2c812707fb40fbad4dabcc583e633b000b9ada159e7172c6943ec603354a5 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_3af2c812707fb40fbad4dabcc583e633b000b9ada159e7172c6943ec603354a5->enter($__internal_3af2c812707fb40fbad4dabcc583e633b000b9ada159e7172c6943ec603354a5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_73f71547744229c90395e77924a176ec7e58af80515d16923984876457b7e4d4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_73f71547744229c90395e77924a176ec7e58af80515d16923984876457b7e4d4->enter($__internal_73f71547744229c90395e77924a176ec7e58af80515d16923984876457b7e4d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_baad49fa7112ecc9a22dacab20169c5e842c4901677e34926e2a9fc6d02d669a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_baad49fa7112ecc9a22dacab20169c5e842c4901677e34926e2a9fc6d02d669a->enter($__internal_baad49fa7112ecc9a22dacab20169c5e842c4901677e34926e2a9fc6d02d669a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a8be41138fe52c3661957ed7e2fd9c7befd3dd5562853b56852cebb8b07b5f3a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_a8be41138fe52c3661957ed7e2fd9c7befd3dd5562853b56852cebb8b07b5f3a->enter($__internal_a8be41138fe52c3661957ed7e2fd9c7befd3dd5562853b56852cebb8b07b5f3a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<div class=\"container\">
@@ -64,39 +64,42 @@ class __TwigTemplate_3a0921638b3261e60c15008516733aceaa09003f06946bf66b65899b449
 \t\t\t\t\t\t<th>ID</th>
 \t\t\t\t\t\t<th>Nombre</th>
 \t\t\t\t\t\t<th>Domicilio Legal</th>
+\t\t\t\t\t\t<th>Contratos</th>
 \t\t\t\t\t\t<th>&nbsp;</th>
 \t\t\t\t\t\t<th>&nbsp;</th>
 \t\t\t\t\t</tr>
 \t\t\t\t\t";
-        // line 22
+        // line 23
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["empresas"] ?? $this->getContext($context, "empresas")));
         foreach ($context['_seq'] as $context["_key"] => $context["empresa"]) {
-            // line 23
+            // line 24
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t<a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("mostrar_empresa", array("id" => $this->getAttribute(            // line 26
+            // line 26
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("mostrar_empresa", array("id" => $this->getAttribute(            // line 27
 $context["empresa"], "id", array()))), "html", null, true);
-            // line 27
+            // line 28
             echo "\">
 \t\t\t\t\t\t\t\t\t";
-            // line 28
+            // line 29
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "id", array()), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t<td>";
-            // line 31
+            // line 32
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "nombre", array()), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 32
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "domicilioLegal", array()), "html", null, true);
             echo "</td>
-
-
+\t\t\t\t\t\t\t<td>";
+            // line 34
+            echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["empresa"], "contratos", array())), "html", null, true);
+            echo "</td>
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t<a href=\"";
             // line 36
@@ -126,10 +129,10 @@ $context["empresa"], "id", array()))), "html", null, true);
 \t</div>
 ";
         
-        $__internal_baad49fa7112ecc9a22dacab20169c5e842c4901677e34926e2a9fc6d02d669a->leave($__internal_baad49fa7112ecc9a22dacab20169c5e842c4901677e34926e2a9fc6d02d669a_prof);
+        $__internal_a8be41138fe52c3661957ed7e2fd9c7befd3dd5562853b56852cebb8b07b5f3a->leave($__internal_a8be41138fe52c3661957ed7e2fd9c7befd3dd5562853b56852cebb8b07b5f3a_prof);
 
         
-        $__internal_3af2c812707fb40fbad4dabcc583e633b000b9ada159e7172c6943ec603354a5->leave($__internal_3af2c812707fb40fbad4dabcc583e633b000b9ada159e7172c6943ec603354a5_prof);
+        $__internal_73f71547744229c90395e77924a176ec7e58af80515d16923984876457b7e4d4->leave($__internal_73f71547744229c90395e77924a176ec7e58af80515d16923984876457b7e4d4_prof);
 
     }
 
@@ -145,7 +148,7 @@ $context["empresa"], "id", array()))), "html", null, true);
 
     public function getDebugInfo()
     {
-        return array (  123 => 50,  106 => 38,  104 => 37,  103 => 36,  96 => 32,  92 => 31,  86 => 28,  83 => 27,  81 => 26,  80 => 25,  76 => 23,  72 => 22,  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  126 => 50,  109 => 38,  107 => 37,  106 => 36,  101 => 34,  97 => 33,  93 => 32,  87 => 29,  84 => 28,  82 => 27,  81 => 26,  77 => 24,  73 => 23,  56 => 9,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -176,6 +179,7 @@ $context["empresa"], "id", array()))), "html", null, true);
 \t\t\t\t\t\t<th>ID</th>
 \t\t\t\t\t\t<th>Nombre</th>
 \t\t\t\t\t\t<th>Domicilio Legal</th>
+\t\t\t\t\t\t<th>Contratos</th>
 \t\t\t\t\t\t<th>&nbsp;</th>
 \t\t\t\t\t\t<th>&nbsp;</th>
 \t\t\t\t\t</tr>
@@ -190,8 +194,7 @@ $context["empresa"], "id", array()))), "html", null, true);
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t<td>{{ empresa.nombre}}</td>
 \t\t\t\t\t\t\t<td>{{ empresa.domicilioLegal}}</td>
-
-
+\t\t\t\t\t\t\t<td>{{ empresa.contratos |length }}</td>
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t<a href=\"{{ path('modificar_empresa',{
 \t\t\t\t\t\t\t\t\t'id' : empresa.id

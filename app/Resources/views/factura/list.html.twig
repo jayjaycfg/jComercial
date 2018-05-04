@@ -29,7 +29,7 @@
 						<th>&nbsp;</th>
 					</tr>
 					{% for factura in facturas %}
-						<tr>
+						<tr class="js-cancelada-danger">
 							<td>
 								<a href="{{ path('show_factura',{
 									'id' : factura.id
@@ -38,7 +38,7 @@
 								</a>
 							</td>
 							<td>{{ factura.usuario}}</td>
-							<td>{{ factura.contrato}}</td>
+							<td>{{ factura.contrato.noDeOrden}}</td>
 							<td>{{ factura.empresa }}</td>
 							<td>{{ factura.programa |json_encode}}</td>
 							<td>{{ factura.descripcionDelGasto}}</td>
@@ -81,6 +81,7 @@
 			var $table = $('.js-table');
 			$table.find('.js-cancelar-factura').on('click',function (e) {
 				e.preventDefault();
+
 				var $row = $(this).closest('tr');
 
 				$.ajax({

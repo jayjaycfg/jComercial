@@ -51,17 +51,47 @@
 					</tr>
 					<tr>
 						<th>Contrato</th>
-						<td>{{ factura.contrato }}</td>
+						<td>
+							<a href="">
+							{{ factura.contrato.noDeOrden}}
+							</a>
+						</td>
 					</tr>
 					<tr>
 						<th>Empresa</th>
-						<td>{{ factura.empresa }}</td>
+						<td>
+							<a href="">
+							{{ factura.empresa.nombre }}
+							</a>
+						</td>
 					</tr>
 					</tbody>
 				</table>
 			</div>
-			<div class="col-xs-4">
+			<div class="col-xs-2">
 				<h3>Empresa:</h3>
+				<ul class="list-group">
+					<li class="list-group-item">
+						<a href="{{ path('mostrar_empresa',{
+							'id' : factura.empresa.id
+						}) }}">
+							{{ factura.empresa.nombre }}
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-xs-2">
+				<h3>Contrato:</h3>
+				<ul class="list-group">
+					<li class="list-group-item">Contrato</li>
+					<li class="list-group-item">
+						<a href="{{ path('mostrar_contrato',{
+							'id' : factura.contrato.id
+						}) }}">
+							{{ factura.contrato.noDeOrden }}
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

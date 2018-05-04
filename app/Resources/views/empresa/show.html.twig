@@ -8,6 +8,13 @@
 					{% if empresa %}
 						{{ empresa.id }}
 					{% endif %}
+
+
+					<a href="{{ path('modificar_empresa', {
+						id: empresa.id
+					}) }}" class="pull-right btn btn-link">
+						<span class="fa fa-pencil"></span>
+					</a>
 				</h1>
 				<table class="table">
 					<tbody>
@@ -18,6 +25,22 @@
 					<tr>
 						<th>Domicilio Legal</th>
 						<td>{{ empresa.domicilioLegal }}</td>
+					</tr>
+					<tr>
+						<th>Contratos</th>
+						<td>
+							<ul class="list-group">
+								{% for contrato in empresa.contratos %}
+								<li class="list-group-item">
+									<a href="{{ path('mostrar_contrato',{
+										'id' : contrato.id
+									}) }}">
+									{{ contrato.noDeOrden }}
+									</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</td>
 					</tr>
 					</tbody>
 				</table>

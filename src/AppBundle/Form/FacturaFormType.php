@@ -26,13 +26,16 @@ class FacturaFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('usuario', EntityType::class,[
-                'placeholder' => 'Seleccione un Usuario',
-                'class' => User::class,
-                'query_builder'=> function($repository){
-                    $repository->createAlphabeticalQueryBuilder();
-                }
-            ])
+//            ->add('usuario')
+//
+//            ->add('usuario', EntityType::class,[
+//                'placeholder' => 'Seleccione un Usuario',
+//                'class' => User::class,
+//                'query_builder'=> function($repository){
+//                    $repository->createAlphabeticalQueryBuilder();
+//                }
+//            ])
+
             ->add('contrato', EntityType::class,[
                 'class' => Contrato::class,
                 'query_builder' =>  function($repository){
@@ -55,12 +58,12 @@ class FacturaFormType extends AbstractType
             ->add('cantidad')
             ->add('precio')
             ->add('participante')
-            ->add('fechaAt',DateTimeType::class,[
-                    'widget' => 'single_text',
-                    'attr' =>[
-                        'class' => 'js-datepicker'
-                    ]
-            ])
+//            ->add('fechaAt',DateTimeType::class,[
+//                    'widget' => 'single_text',
+//                    'attr' =>[
+//                        'class' => 'js-datepicker'
+//                    ]
+//            ])
             ->add('isCancelada')
             ->add('explicacionPorCancelada')
             ;

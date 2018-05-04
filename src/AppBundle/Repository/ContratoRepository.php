@@ -16,6 +16,6 @@ class ContratoRepository extends EntityRepository
     public function createAlphabeticalQueryBuilder()
     {
         return $this->createQueryBuilder('contrato')
-            ->orderBy('contrato.id', 'ASC');
+            ->orderBy('contrato.noDeOrden', 'ASC');
     }
 }

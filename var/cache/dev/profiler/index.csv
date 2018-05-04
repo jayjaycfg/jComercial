@@ -1,5 +1,0 @@
-aedd9e,127.0.0.1,GET,http://localhost:8000/empresa/23/mostrar,1525374017,,200
-9d7a7b,127.0.0.1,GET,http://localhost:8000/empresa/25/mostrar,1525374021,,200
-8ad526,127.0.0.1,GET,http://localhost:8000/empresa/21/editar,1525374029,,200
-87d41b,127.0.0.1,POST,http://localhost:8000/empresa/21/editar,1525374033,,302
-30aaca,127.0.0.1,GET,http://localhost:8000/empresa/listar,1525374033,,200

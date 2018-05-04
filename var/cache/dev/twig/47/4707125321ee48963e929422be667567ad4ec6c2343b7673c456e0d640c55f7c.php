@@ -21,29 +21,29 @@ class __TwigTemplate_09eb621a7409fc411e14faf8631c6f5c5a426f182b86cb5be771357c8a8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0a7d865674f2c80ce86f85815ec388457f19cfe70b1a520969e20608f8ef006a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0a7d865674f2c80ce86f85815ec388457f19cfe70b1a520969e20608f8ef006a->enter($__internal_0a7d865674f2c80ce86f85815ec388457f19cfe70b1a520969e20608f8ef006a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:show.html.twig"));
+        $__internal_f656d22fab2c68e96ceb9e87d3ac2e7c37a70d47f09b45b4e37deea82e32fe16 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_f656d22fab2c68e96ceb9e87d3ac2e7c37a70d47f09b45b4e37deea82e32fe16->enter($__internal_f656d22fab2c68e96ceb9e87d3ac2e7c37a70d47f09b45b4e37deea82e32fe16_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:show.html.twig"));
 
-        $__internal_e0df9b95670fb405ee20e4d1122815f7ee39ebf6935e21c751832e018668539a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e0df9b95670fb405ee20e4d1122815f7ee39ebf6935e21c751832e018668539a->enter($__internal_e0df9b95670fb405ee20e4d1122815f7ee39ebf6935e21c751832e018668539a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:show.html.twig"));
+        $__internal_cbf7a36c676852f9fa7ea822a48f6746d755e91e84c4749692ca763e23cc1eae = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cbf7a36c676852f9fa7ea822a48f6746d755e91e84c4749692ca763e23cc1eae->enter($__internal_cbf7a36c676852f9fa7ea822a48f6746d755e91e84c4749692ca763e23cc1eae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_0a7d865674f2c80ce86f85815ec388457f19cfe70b1a520969e20608f8ef006a->leave($__internal_0a7d865674f2c80ce86f85815ec388457f19cfe70b1a520969e20608f8ef006a_prof);
+        $__internal_f656d22fab2c68e96ceb9e87d3ac2e7c37a70d47f09b45b4e37deea82e32fe16->leave($__internal_f656d22fab2c68e96ceb9e87d3ac2e7c37a70d47f09b45b4e37deea82e32fe16_prof);
 
         
-        $__internal_e0df9b95670fb405ee20e4d1122815f7ee39ebf6935e21c751832e018668539a->leave($__internal_e0df9b95670fb405ee20e4d1122815f7ee39ebf6935e21c751832e018668539a_prof);
+        $__internal_cbf7a36c676852f9fa7ea822a48f6746d755e91e84c4749692ca763e23cc1eae->leave($__internal_cbf7a36c676852f9fa7ea822a48f6746d755e91e84c4749692ca763e23cc1eae_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_167852ebd7661aad95c6f0a223e95e4ee74f84592d6525630ef1dd44785c416e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_167852ebd7661aad95c6f0a223e95e4ee74f84592d6525630ef1dd44785c416e->enter($__internal_167852ebd7661aad95c6f0a223e95e4ee74f84592d6525630ef1dd44785c416e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ff03ce6cb3ac1f93eca5bef0934a46adbffb2f70360063034d0f34861e679e09 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ff03ce6cb3ac1f93eca5bef0934a46adbffb2f70360063034d0f34861e679e09->enter($__internal_ff03ce6cb3ac1f93eca5bef0934a46adbffb2f70360063034d0f34861e679e09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_4fdf2be8420fd278062614b0a48201c0e96db1c9c67aa901684f873ceb827361 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4fdf2be8420fd278062614b0a48201c0e96db1c9c67aa901684f873ceb827361->enter($__internal_4fdf2be8420fd278062614b0a48201c0e96db1c9c67aa901684f873ceb827361_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_57d327d8893dc67d3cd5c50476b58663895ca501787cbbb759096ae74d7e8ec9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_57d327d8893dc67d3cd5c50476b58663895ca501787cbbb759096ae74d7e8ec9->enter($__internal_57d327d8893dc67d3cd5c50476b58663895ca501787cbbb759096ae74d7e8ec9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<div class=\"container\">
@@ -154,97 +154,67 @@ class __TwigTemplate_09eb621a7409fc411e14faf8631c6f5c5a426f182b86cb5be771357c8a8
         echo twig_escape_filter($this->env, twig_jsonencode_filter($this->getAttribute(($context["contrato"] ?? $this->getContext($context, "contrato")), "ministerio", array())), "html", null, true);
         echo "</td>
 \t\t\t\t\t</tr>
-\t\t\t\t\t";
-        // line 67
-        echo "\t\t\t\t\t\t";
-        // line 68
-        echo "\t\t\t\t\t\t";
-        // line 69
-        echo "\t\t\t\t\t\t";
-        // line 70
-        echo "\t\t\t\t\t\t";
-        // line 71
-        echo "\t\t\t\t\t";
-        // line 72
-        echo "
-\t\t\t\t\t";
-        // line 74
-        echo "\t\t\t\t\t\t";
-        // line 75
-        echo "\t\t\t\t\t\t\t";
-        // line 76
-        echo "\t\t\t\t\t\t\t";
-        // line 77
-        echo "\t\t\t\t\t\t";
-        // line 78
-        echo "\t\t\t\t\t\t";
-        // line 79
-        echo "\t\t\t\t\t\t\t";
-        // line 80
-        echo "\t\t\t\t\t\t\t";
-        // line 81
-        echo "\t\t\t\t\t\t";
-        // line 82
-        echo "\t\t\t\t\t";
-        // line 83
-        echo "\t\t\t\t\t";
-        // line 84
-        echo "\t\t\t\t\t\t";
-        // line 85
-        echo "\t\t\t\t\t\t";
-        // line 86
-        echo "\t\t\t\t\t";
-        // line 87
-        echo "\t\t\t\t\t";
-        // line 88
-        echo "\t\t\t\t\t\t";
-        // line 89
-        echo "\t\t\t\t\t\t";
-        // line 90
-        echo "\t\t\t\t\t";
-        // line 91
-        echo "\t\t\t\t\t";
-        // line 92
-        echo "\t\t\t\t\t\t";
-        // line 93
-        echo "\t\t\t\t\t\t";
-        // line 94
-        echo "\t\t\t\t\t";
-        // line 95
-        echo "\t\t\t\t\t</tbody>
+\t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
-\t\t\t<div class=\"col-xs-4\">
+\t\t\t<div class=\"col-xs-2\">
 \t\t\t\t<h3>Empresa:</h3>
 \t\t\t\t<ul class=\"list-group\">
-\t\t\t\t";
-        // line 101
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["contrato"] ?? $this->getContext($context, "contrato")), "empresas", array()));
-        foreach ($context['_seq'] as $context["_key"] => $context["empresa"]) {
-            // line 102
-            echo "\t\t\t\t\t<li class=\"list-group-item\">
+\t\t\t\t\t<li class=\"list-group-item\">
+\t\t\t\t\t\t<a href=\"";
+        // line 73
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("mostrar_empresa", array("id" => $this->getAttribute($this->getAttribute(        // line 74
+($context["contrato"] ?? $this->getContext($context, "contrato")), "empresa", array()), "id", array()))), "html", null, true);
+        // line 75
+        echo "\">
 \t\t\t\t\t\t";
-            // line 103
-            echo twig_escape_filter($this->env, $this->getAttribute($context["empresa"], "nombre", array()), "html", null, true);
-            echo "
+        // line 76
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["contrato"] ?? $this->getContext($context, "contrato")), "empresa", array()), "nombre", array()), "html", null, true);
+        echo "
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
-\t\t\t\t";
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-2\">
+\t\t\t\t<h3>Facturas Asociadas:</h3>
+\t\t\t\t<ul class=\"list-group\">
+\t\t\t\t\t";
+        // line 84
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["contrato"] ?? $this->getContext($context, "contrato")), "facturas", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["factura"]) {
+            // line 85
+            echo "\t\t\t\t\t<li class=\"list-group-item\">
+
+\t\t\t\t\t\t\t<a href=\"";
+            // line 87
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("show_factura", array("id" => $this->getAttribute(            // line 88
+$context["factura"], "id", array()))), "html", null, true);
+            // line 89
+            echo "\">
+\t\t\t\t\t\t\t\t";
+            // line 90
+            echo twig_escape_filter($this->env, $this->getAttribute($context["factura"], "id", array()), "html", null, true);
+            echo "
+\t\t\t\t\t\t\t</a>
+
+\t\t\t\t\t</li>
+\t\t\t\t\t";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['empresa'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['factura'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 106
+        // line 95
         echo "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>
 \t</div>
 ";
         
-        $__internal_4fdf2be8420fd278062614b0a48201c0e96db1c9c67aa901684f873ceb827361->leave($__internal_4fdf2be8420fd278062614b0a48201c0e96db1c9c67aa901684f873ceb827361_prof);
+        $__internal_57d327d8893dc67d3cd5c50476b58663895ca501787cbbb759096ae74d7e8ec9->leave($__internal_57d327d8893dc67d3cd5c50476b58663895ca501787cbbb759096ae74d7e8ec9_prof);
 
         
-        $__internal_167852ebd7661aad95c6f0a223e95e4ee74f84592d6525630ef1dd44785c416e->leave($__internal_167852ebd7661aad95c6f0a223e95e4ee74f84592d6525630ef1dd44785c416e_prof);
+        $__internal_ff03ce6cb3ac1f93eca5bef0934a46adbffb2f70360063034d0f34861e679e09->leave($__internal_ff03ce6cb3ac1f93eca5bef0934a46adbffb2f70360063034d0f34861e679e09_prof);
 
     }
 
@@ -260,7 +230,7 @@ class __TwigTemplate_09eb621a7409fc411e14faf8631c6f5c5a426f182b86cb5be771357c8a8
 
     public function getDebugInfo()
     {
-        return array (  238 => 106,  229 => 103,  226 => 102,  222 => 101,  214 => 95,  212 => 94,  210 => 93,  208 => 92,  206 => 91,  204 => 90,  202 => 89,  200 => 88,  198 => 87,  196 => 86,  194 => 85,  192 => 84,  190 => 83,  188 => 82,  186 => 81,  184 => 80,  182 => 79,  180 => 78,  178 => 77,  176 => 76,  174 => 75,  172 => 74,  169 => 72,  167 => 71,  165 => 70,  163 => 69,  161 => 68,  159 => 67,  154 => 64,  147 => 60,  140 => 56,  133 => 52,  126 => 48,  119 => 44,  112 => 40,  105 => 36,  98 => 32,  91 => 28,  84 => 24,  77 => 20,  70 => 16,  63 => 11,  57 => 9,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
+        return array (  208 => 95,  197 => 90,  194 => 89,  192 => 88,  191 => 87,  187 => 85,  183 => 84,  172 => 76,  169 => 75,  167 => 74,  166 => 73,  154 => 64,  147 => 60,  140 => 56,  133 => 52,  126 => 48,  119 => 44,  112 => 40,  105 => 36,  98 => 32,  91 => 28,  84 => 24,  77 => 20,  70 => 16,  63 => 11,  57 => 9,  55 => 8,  49 => 4,  40 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -338,46 +308,35 @@ class __TwigTemplate_09eb621a7409fc411e14faf8631c6f5c5a426f182b86cb5be771357c8a8
 \t\t\t\t\t\t<th>Ministerio</th>
 \t\t\t\t\t\t<td>{{ contrato.ministerio |json_encode}}</td>
 \t\t\t\t\t</tr>
-\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t{#<th>Empresa</th>#}
-\t\t\t\t\t\t{#{% for empresa in contrato.empresas %}#}
-\t\t\t\t\t\t{#<td>{{ empresa.nombre }}</td>#}
-\t\t\t\t\t\t{#{% endfor %}#}
-\t\t\t\t\t{#</tr>#}
-
-\t\t\t\t\t{#{% if factura.isCancelada == 'true' %}#}
-\t\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t\t{#<th>Cancelada</th>#}
-\t\t\t\t\t\t\t{#<td>Factura cancelada</td>#}
-\t\t\t\t\t\t{#</tr>#}
-\t\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t\t{#<th>Explicacion</th>#}
-\t\t\t\t\t\t\t{#<td>{{ factura.explicacionPorCancelada }}</td>#}
-\t\t\t\t\t\t{#</tr>#}
-\t\t\t\t\t{#{% endif %}#}
-\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t{#<th>Usuario</th>#}
-\t\t\t\t\t\t{#<td>{{ factura.usuario }}</td>#}
-\t\t\t\t\t{#</tr>#}
-\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t{#<th>Contrato</th>#}
-\t\t\t\t\t\t{#<td>{{ factura.contrato }}</td>#}
-\t\t\t\t\t{#</tr>#}
-\t\t\t\t\t{#<tr>#}
-\t\t\t\t\t\t{#<th>Empresa</th>#}
-\t\t\t\t\t\t{#<td>{{ factura.empresa }}</td>#}
-\t\t\t\t\t{#</tr>#}
 \t\t\t\t\t</tbody>
 \t\t\t\t</table>
 \t\t\t</div>
-\t\t\t<div class=\"col-xs-4\">
+\t\t\t<div class=\"col-xs-2\">
 \t\t\t\t<h3>Empresa:</h3>
 \t\t\t\t<ul class=\"list-group\">
-\t\t\t\t{% for empresa in contrato.empresas %}
 \t\t\t\t\t<li class=\"list-group-item\">
-\t\t\t\t\t\t{{ empresa.nombre }}
+\t\t\t\t\t\t<a href=\"{{ path('mostrar_empresa',{
+\t\t\t\t\t\t\t'id' : contrato.empresa.id
+\t\t\t\t\t\t}) }}\">
+\t\t\t\t\t\t{{ contrato.empresa.nombre }}
+\t\t\t\t\t\t</a>
 \t\t\t\t\t</li>
-\t\t\t\t{% endfor %}
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-2\">
+\t\t\t\t<h3>Facturas Asociadas:</h3>
+\t\t\t\t<ul class=\"list-group\">
+\t\t\t\t\t{% for factura in contrato.facturas %}
+\t\t\t\t\t<li class=\"list-group-item\">
+
+\t\t\t\t\t\t\t<a href=\"{{ path('show_factura',{
+\t\t\t\t\t\t\t\t'id' : factura.id
+\t\t\t\t\t\t\t}) }}\">
+\t\t\t\t\t\t\t\t{{ factura.id }}
+\t\t\t\t\t\t\t</a>
+
+\t\t\t\t\t</li>
+\t\t\t\t\t{% endfor %}
 \t\t\t\t</ul>
 \t\t\t</div>
 \t\t</div>

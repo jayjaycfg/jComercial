@@ -22,29 +22,29 @@ class __TwigTemplate_9efb8eca6a29fb7e789ad61aaba96f12c6c3e871f9ebfa80e3df6491d15
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b8706f64a6dfc6f5b9d091167bb9b28a34e5245d9240679d27b9cb3481b4686e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b8706f64a6dfc6f5b9d091167bb9b28a34e5245d9240679d27b9cb3481b4686e->enter($__internal_b8706f64a6dfc6f5b9d091167bb9b28a34e5245d9240679d27b9cb3481b4686e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:list.html.twig"));
+        $__internal_301772c6f06f99f5ccd9d5a30fb6c78b0697bd0497e21d72f2204e2988450691 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_301772c6f06f99f5ccd9d5a30fb6c78b0697bd0497e21d72f2204e2988450691->enter($__internal_301772c6f06f99f5ccd9d5a30fb6c78b0697bd0497e21d72f2204e2988450691_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:list.html.twig"));
 
-        $__internal_0a2034baf15f5d26f928c686fd34780502932b8615ee9594cb42033d47bc623c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0a2034baf15f5d26f928c686fd34780502932b8615ee9594cb42033d47bc623c->enter($__internal_0a2034baf15f5d26f928c686fd34780502932b8615ee9594cb42033d47bc623c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:list.html.twig"));
+        $__internal_da7b0703120cc7bf9edc836a58b071f0ec1bcaec22c5d93a19941345135c5627 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_da7b0703120cc7bf9edc836a58b071f0ec1bcaec22c5d93a19941345135c5627->enter($__internal_da7b0703120cc7bf9edc836a58b071f0ec1bcaec22c5d93a19941345135c5627_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b8706f64a6dfc6f5b9d091167bb9b28a34e5245d9240679d27b9cb3481b4686e->leave($__internal_b8706f64a6dfc6f5b9d091167bb9b28a34e5245d9240679d27b9cb3481b4686e_prof);
+        $__internal_301772c6f06f99f5ccd9d5a30fb6c78b0697bd0497e21d72f2204e2988450691->leave($__internal_301772c6f06f99f5ccd9d5a30fb6c78b0697bd0497e21d72f2204e2988450691_prof);
 
         
-        $__internal_0a2034baf15f5d26f928c686fd34780502932b8615ee9594cb42033d47bc623c->leave($__internal_0a2034baf15f5d26f928c686fd34780502932b8615ee9594cb42033d47bc623c_prof);
+        $__internal_da7b0703120cc7bf9edc836a58b071f0ec1bcaec22c5d93a19941345135c5627->leave($__internal_da7b0703120cc7bf9edc836a58b071f0ec1bcaec22c5d93a19941345135c5627_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_c05e77a9d49fff6ee5109fbbc898deb8a43b485b30cdbfd52d330fdc6f8dd4d4 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_c05e77a9d49fff6ee5109fbbc898deb8a43b485b30cdbfd52d330fdc6f8dd4d4->enter($__internal_c05e77a9d49fff6ee5109fbbc898deb8a43b485b30cdbfd52d330fdc6f8dd4d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_908066fb0f295142f83486952a8a4268bee4110f86cc6e2bff1f62bc87e5d614 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_908066fb0f295142f83486952a8a4268bee4110f86cc6e2bff1f62bc87e5d614->enter($__internal_908066fb0f295142f83486952a8a4268bee4110f86cc6e2bff1f62bc87e5d614_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_9d3e4929995c2322956133e142b7ba399377109d34682d51c06178fbbd3ef8ac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9d3e4929995c2322956133e142b7ba399377109d34682d51c06178fbbd3ef8ac->enter($__internal_9d3e4929995c2322956133e142b7ba399377109d34682d51c06178fbbd3ef8ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b5296057dbb9771dade8ac9905717d37eb65479726b52e9c78348034e8c5b4ad = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b5296057dbb9771dade8ac9905717d37eb65479726b52e9c78348034e8c5b4ad->enter($__internal_b5296057dbb9771dade8ac9905717d37eb65479726b52e9c78348034e8c5b4ad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "\t<div class=\"container\">
@@ -83,7 +83,7 @@ class __TwigTemplate_9efb8eca6a29fb7e789ad61aaba96f12c6c3e871f9ebfa80e3df6491d15
         $context['_seq'] = twig_ensure_traversable(($context["facturas"] ?? $this->getContext($context, "facturas")));
         foreach ($context['_seq'] as $context["_key"] => $context["factura"]) {
             // line 32
-            echo "\t\t\t\t\t\t<tr>
+            echo "\t\t\t\t\t\t<tr class=\"js-cancelada-danger\">
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t<a href=\"";
             // line 34
@@ -103,7 +103,7 @@ $context["factura"], "id", array()))), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
             // line 41
-            echo twig_escape_filter($this->env, $this->getAttribute($context["factura"], "contrato", array()), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["factura"], "contrato", array()), "noDeOrden", array()), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
             // line 42
@@ -177,21 +177,21 @@ $context["factura"], "id", array()))), "html", null, true);
 \t</div>
 ";
         
-        $__internal_9d3e4929995c2322956133e142b7ba399377109d34682d51c06178fbbd3ef8ac->leave($__internal_9d3e4929995c2322956133e142b7ba399377109d34682d51c06178fbbd3ef8ac_prof);
+        $__internal_b5296057dbb9771dade8ac9905717d37eb65479726b52e9c78348034e8c5b4ad->leave($__internal_b5296057dbb9771dade8ac9905717d37eb65479726b52e9c78348034e8c5b4ad_prof);
 
         
-        $__internal_c05e77a9d49fff6ee5109fbbc898deb8a43b485b30cdbfd52d330fdc6f8dd4d4->leave($__internal_c05e77a9d49fff6ee5109fbbc898deb8a43b485b30cdbfd52d330fdc6f8dd4d4_prof);
+        $__internal_908066fb0f295142f83486952a8a4268bee4110f86cc6e2bff1f62bc87e5d614->leave($__internal_908066fb0f295142f83486952a8a4268bee4110f86cc6e2bff1f62bc87e5d614_prof);
 
     }
 
     // line 77
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_0f8eb1de1c4641ffe6ea646a754e1c57e90bf891af57db0d560d00ed45252248 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_0f8eb1de1c4641ffe6ea646a754e1c57e90bf891af57db0d560d00ed45252248->enter($__internal_0f8eb1de1c4641ffe6ea646a754e1c57e90bf891af57db0d560d00ed45252248_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_5d794ca61d3d89ecd9deac91da835f53d8ec2edb8e7a504e3f588db51b678876 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_5d794ca61d3d89ecd9deac91da835f53d8ec2edb8e7a504e3f588db51b678876->enter($__internal_5d794ca61d3d89ecd9deac91da835f53d8ec2edb8e7a504e3f588db51b678876_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_2d54a804b48db6b0f204cc5a72ff01b381137114f455f86c70c1112fc36f1be2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2d54a804b48db6b0f204cc5a72ff01b381137114f455f86c70c1112fc36f1be2->enter($__internal_2d54a804b48db6b0f204cc5a72ff01b381137114f455f86c70c1112fc36f1be2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_7bb396cb162673e83c1c262b26a7476fef0f351bf66b186b798fff7d95584090 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7bb396cb162673e83c1c262b26a7476fef0f351bf66b186b798fff7d95584090->enter($__internal_7bb396cb162673e83c1c262b26a7476fef0f351bf66b186b798fff7d95584090_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 78
         echo "\t";
@@ -202,6 +202,7 @@ $context["factura"], "id", array()))), "html", null, true);
 \t\t\tvar \$table = \$('.js-table');
 \t\t\t\$table.find('.js-cancelar-factura').on('click',function (e) {
 \t\t\t\te.preventDefault();
+
 \t\t\t\tvar \$row = \$(this).closest('tr');
 
 \t\t\t\t\$.ajax({
@@ -214,10 +215,10 @@ $context["factura"], "id", array()))), "html", null, true);
 \t</script>
 ";
         
-        $__internal_2d54a804b48db6b0f204cc5a72ff01b381137114f455f86c70c1112fc36f1be2->leave($__internal_2d54a804b48db6b0f204cc5a72ff01b381137114f455f86c70c1112fc36f1be2_prof);
+        $__internal_7bb396cb162673e83c1c262b26a7476fef0f351bf66b186b798fff7d95584090->leave($__internal_7bb396cb162673e83c1c262b26a7476fef0f351bf66b186b798fff7d95584090_prof);
 
         
-        $__internal_0f8eb1de1c4641ffe6ea646a754e1c57e90bf891af57db0d560d00ed45252248->leave($__internal_0f8eb1de1c4641ffe6ea646a754e1c57e90bf891af57db0d560d00ed45252248_prof);
+        $__internal_5d794ca61d3d89ecd9deac91da835f53d8ec2edb8e7a504e3f588db51b678876->leave($__internal_5d794ca61d3d89ecd9deac91da835f53d8ec2edb8e7a504e3f588db51b678876_prof);
 
     }
 
@@ -277,7 +278,7 @@ $context["factura"], "id", array()))), "html", null, true);
 \t\t\t\t\t\t<th>&nbsp;</th>
 \t\t\t\t\t</tr>
 \t\t\t\t\t{% for factura in facturas %}
-\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t<tr class=\"js-cancelada-danger\">
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t<a href=\"{{ path('show_factura',{
 \t\t\t\t\t\t\t\t\t'id' : factura.id
@@ -286,7 +287,7 @@ $context["factura"], "id", array()))), "html", null, true);
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</td>
 \t\t\t\t\t\t\t<td>{{ factura.usuario}}</td>
-\t\t\t\t\t\t\t<td>{{ factura.contrato}}</td>
+\t\t\t\t\t\t\t<td>{{ factura.contrato.noDeOrden}}</td>
 \t\t\t\t\t\t\t<td>{{ factura.empresa }}</td>
 \t\t\t\t\t\t\t<td>{{ factura.programa |json_encode}}</td>
 \t\t\t\t\t\t\t<td>{{ factura.descripcionDelGasto}}</td>
@@ -329,6 +330,7 @@ $context["factura"], "id", array()))), "html", null, true);
 \t\t\tvar \$table = \$('.js-table');
 \t\t\t\$table.find('.js-cancelar-factura').on('click',function (e) {
 \t\t\t\te.preventDefault();
+
 \t\t\t\tvar \$row = \$(this).closest('tr');
 
 \t\t\t\t\$.ajax({

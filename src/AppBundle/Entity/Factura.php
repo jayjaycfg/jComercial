@@ -48,15 +48,15 @@ class Factura
      */
     private $isCancelada = false;
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type="text", nullable=true)
      */
     private $explicacionPorCancelada = null;
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
+     * @ORM\Column(type="string")
      */
     private $usuario;
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Contrato")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Contrato", inversedBy="facturas")
      */
     private $contrato;
     /**
@@ -66,9 +66,9 @@ class Factura
 
 //    public function __construct()
 //    {
-//        $this->usuario = new ArrayCollection();
-//        $this->contrato = new ArrayCollection();
-//        $this->empresa  = new ArrayCollection();
+////        $this->usuario = new ArrayCollection();
+////        $this->contrato = new ArrayCollection();
+////        $this->empresa  = new ArrayCollection();
 //    }
 
 
@@ -166,23 +166,23 @@ class Factura
     {
         $this->usuario = $usuario;
     }
-
+        /** @return ArrayCollection|Contrato[] */
     public function getContrato()
     {
         return $this->contrato;
     }
 
-    public function setContrato($contrato)
+    public function setContrato(Contrato $contrato)
     {
         $this->contrato = $contrato;
     }
-
+    /** @return  ArrayCollection|Empresa[] */
     public function getEmpresa()
     {
         return $this->empresa;
     }
 
-    public function setEmpresa($empresa)
+    public function setEmpresa(Empresa $empresa)
     {
         $this->empresa = $empresa;
     }

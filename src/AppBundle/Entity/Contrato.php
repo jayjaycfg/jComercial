@@ -25,7 +25,7 @@ class Contrato
      */
     private $id;
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $noDeOrden;
     /**
@@ -76,15 +76,22 @@ class Contrato
      * @ORM\Column(type="string")
      */
     private $ministerio = [];
+
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Empresa", inversedBy="contratos")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa", inversedBy="contratos")
      */
-    private $empresas;
+    private $empresa;
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Factura", mappedBy="contrato")
+     *
+     */
+    private $facturas;
 
     public function __construct()
     {
-            $this->empresas = new ArrayCollection();
+        $this->facturas = new ArrayCollection();
     }
+
     public function getId()
     {
         return $this->id;
@@ -220,35 +227,29 @@ class Contrato
         $this->ministerio = $ministerio;
     }
 
-    /**
-     * @return ArrayCollection|Empresa[]
-     */
-    public function getEmpresas()
+    public function getEmpresa()
     {
-        return $this->empresas;
+        return $this->empresa;
     }
 
-    public function setEmpresas($empresas)
+    public function setEmpresa($empresa)
     {
-        $this->empresas = $empresas;
+        $this->empresa = $empresa;
+    }
+    /** @return  ArrayCollection|Factura[] */
+    public function getFacturas()
+    {
+        return $this->facturas;
     }
 
-    public function addEmpresa(Empresa $empresa)
+    public function setFacturas(Factura $facturas)
     {
-        if($this->empresas->contains($empresa)){
-            return null;
-        }
-        $this->empresas[] =   $empresa;
-    }
-
-    public function removeEmpresa(Empresa $empresa)
-    {
-        $this->empresas->removeElement($empresa);
+        $this->facturas = $facturas;
     }
 
     public function __toString()
     {
-        return $this->getCorreo();
+        return $this->getNoDeOrden();
     }
 
 }

@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: audioxtreme
- * Date: 2/05/18
- * Time: 23:08
- */
 
 namespace AppBundle\Repository;
-
 
 use Doctrine\ORM\EntityRepository;
 

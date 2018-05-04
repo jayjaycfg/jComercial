@@ -47,12 +47,13 @@ class ContratoController extends Controller
      */
     public function crearAction(Request $request)
     {
+        $em = $this->getDoctrine()->getManager();
         $form = $this->createForm(ContratoFormType::class);
         $form->handleRequest($request);
             if($form->isSubmitted() && $form->isValid()){
+//                $contrato = new Contrato();
                 $contrato = $form->getData();
 
-                $em = $this->getDoctrine()->getManager();
                 $em->persist($contrato);
                 $em->flush();
 

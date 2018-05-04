@@ -34,7 +34,7 @@ class Empresa
     private $domicilioLegal;
 
     /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Contrato", mappedBy="empresas")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Contrato", mappedBy="empresa")
      */
     private $contratos;
 
@@ -42,6 +42,7 @@ class Empresa
     {
         $this->contratos = new ArrayCollection();
     }
+
 
     public function getId()
     {
@@ -68,6 +69,7 @@ class Empresa
         $this->domicilioLegal = $domicilioLegal;
     }
 
+
     /**
      * @return ArrayCollection|Contrato[]
      */
@@ -79,19 +81,6 @@ class Empresa
     public function setContratos($contratos)
     {
         $this->contratos = $contratos;
-    }
-
-    public function addContrato(Contrato $contrato)
-    {
-        if($this->contratos->contains($contrato)){
-            return null;
-        }
-        $this->contratos[] = $contrato;
-    }
-
-    public function removeContrato(Contrato $contrato)
-    {
-        $this->contratos->removeElement($contrato);
     }
 
     public function __toString()
