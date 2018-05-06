@@ -21,26 +21,32 @@ class Factura
     private $id;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $programa;
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $descripcionDelGasto;
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $cantidad;
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $precio;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $participante;
     /**
      * @ORM\Column(type="datetime")
+     *
      */
     private $fechaAt;
     /**
@@ -53,24 +59,19 @@ class Factura
     private $explicacionPorCancelada = null;
     /**
      * @ORM\Column(type="string")
+     *
      */
     private $usuario;
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Contrato", inversedBy="facturas")
+     *@Assert\NotBlank(message="Campo Obligatorio")
      */
     private $contrato;
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa", inversedBy="facturas")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $empresa;
-
-//    public function __construct()
-//    {
-////        $this->usuario = new ArrayCollection();
-////        $this->contrato = new ArrayCollection();
-////        $this->empresa  = new ArrayCollection();
-//    }
-
 
     public function getId()
     {
@@ -166,7 +167,7 @@ class Factura
     {
         $this->usuario = $usuario;
     }
-        /** @return ArrayCollection|Contrato[] */
+
     public function getContrato()
     {
         return $this->contrato;
@@ -174,9 +175,9 @@ class Factura
 
     public function setContrato(Contrato $contrato)
     {
-        $this->contrato = $contrato;
+            $this->contrato = $contrato;
     }
-    /** @return  ArrayCollection|Empresa[] */
+
     public function getEmpresa()
     {
         return $this->empresa;

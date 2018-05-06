@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\EmpresaRepository")
@@ -26,17 +27,24 @@ class Empresa
     private $id;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $nombre;
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $domicilioLegal;
 
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Contrato", mappedBy="empresa")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $contratos;
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Factura", mappedBy="empresa")
+     */
+    private $facturas;
 
     public function __construct()
     {
@@ -78,10 +86,24 @@ class Empresa
         return $this->contratos;
     }
 
-    public function setContratos($contratos)
+    public function setContratos($contrato)
     {
-        $this->contratos = $contratos;
+        $this->contratos [] = $contrato;
     }
+
+    /**
+     * @return ArrayCollection|Factura[]
+     */
+    public function getFacturas()
+    {
+        return $this->facturas;
+    }
+
+    public function setFacturas($facturas)
+    {
+        $this->facturas = $facturas;
+    }
+
 
     public function __toString()
     {

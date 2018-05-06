@@ -11,6 +11,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\ContratoRepository")
@@ -25,60 +26,76 @@ class Contrato
      */
     private $id;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable= false, unique=true)
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $noDeOrden;
     /**
      * @ORM\Column(type="string")
+     *@Assert\NotBlank(message="Campo Obligatorio")
      */
     private $tipoDeContrato = [];
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $valorInicialMn = 0 ;
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $valorInicialCuc = 0;
     /**
      * @ORM\Column(type="boolean")
+     *
      */
-    private $isSuplemento;
+    private $isSuplemento = false;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $actaDeFirmado;
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $fechaDeOtorgamiento;
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $fechaDeVencimiento;
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $telefono;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
+     * @Assert\Email(message="Inserte una direccion de correo valida")
      */
     private $correo;
     /**
      * @ORM\Column(type="boolean")
+     *
+     *
      */
-    private $isCliente;
+    private $isCliente = true;
     /**
      * @ORM\Column(type="boolean")
+     *
      */
-    private $isProveedor;
+    private $isProveedor = false;
     /**
      * @ORM\Column(type="string")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $ministerio = [];
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa", inversedBy="contratos")
+     * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $empresa;
     /**

@@ -184,6 +184,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
 
         elseif (0 === strpos($pathinfo, '/factura')) {
+            // testin
+            if ('/factura/test' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\FacturaController::testAction',  '_route' => 'testin',);
+            }
+
             // list_factura
             if ('/factura/listar' === $pathinfo) {
                 return array (  '_controller' => 'AppBundle\\Controller\\FacturaController::listAction',  '_route' => 'list_factura',);

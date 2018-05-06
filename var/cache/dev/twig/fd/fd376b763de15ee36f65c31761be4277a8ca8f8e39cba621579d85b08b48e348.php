@@ -15,11 +15,11 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff->enter($__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
+        $__internal_da4b4ce462219a6c024a262000b8df8820dd09c1f8a0b13d5bc3719c5e54ee9c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_da4b4ce462219a6c024a262000b8df8820dd09c1f8a0b13d5bc3719c5e54ee9c->enter($__internal_da4b4ce462219a6c024a262000b8df8820dd09c1f8a0b13d5bc3719c5e54ee9c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
 
-        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6->enter($__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
+        $__internal_15b2ad19800e963d278b4d28e73680969537e22d3a2dc19d5fb3734f537ec29e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_15b2ad19800e963d278b4d28e73680969537e22d3a2dc19d5fb3734f537ec29e->enter($__internal_15b2ad19800e963d278b4d28e73680969537e22d3a2dc19d5fb3734f537ec29e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":contrato:_form.html.twig"));
 
         // line 1
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
@@ -30,55 +30,55 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
         echo "
 \t\t\t\t\t";
         // line 3
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoDeContrato", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "empresa", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 4
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "valorInicialMn", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "tipoDeContrato", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 5
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "valorInicialCuc", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "valorInicialMn", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 6
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isSuplemento", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "valorInicialCuc", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 7
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "actaDeFirmado", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isSuplemento", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 8
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "fechaDeOtorgamiento", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "actaDeFirmado", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 9
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "fechaDeVencimiento", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "fechaDeOtorgamiento", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 10
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "telefono", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "fechaDeVencimiento", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 11
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "correo", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "telefono", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 12
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isCliente", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "correo", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 13
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isProveedor", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isCliente", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 14
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "ministerio", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isProveedor", array()), 'row');
         echo "
 \t\t\t\t\t";
         // line 15
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "empresa", array()), 'row');
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "ministerio", array()), 'row');
         echo "
 
 <button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Añadir</button>
@@ -86,10 +86,10 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
         // line 18
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         
-        $__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff->leave($__internal_eaba2fa852504fd31c703184d426290aa131da08875967679f6f34f353f10eff_prof);
+        $__internal_da4b4ce462219a6c024a262000b8df8820dd09c1f8a0b13d5bc3719c5e54ee9c->leave($__internal_da4b4ce462219a6c024a262000b8df8820dd09c1f8a0b13d5bc3719c5e54ee9c_prof);
 
         
-        $__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6->leave($__internal_1f1d00f8e94052ef256b87fa6e5acfc48babcdf9135993d8748e89adc2bb2fe6_prof);
+        $__internal_15b2ad19800e963d278b4d28e73680969537e22d3a2dc19d5fb3734f537ec29e->leave($__internal_15b2ad19800e963d278b4d28e73680969537e22d3a2dc19d5fb3734f537ec29e_prof);
 
     }
 
@@ -120,6 +120,7 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
     {
         return new Twig_Source("{{ form_start(form) }}
 \t\t\t\t\t{{ form_row(form.noDeOrden) }}
+\t\t\t\t\t{{ form_row(form.empresa) }}
 \t\t\t\t\t{{ form_row(form.tipoDeContrato) }}
 \t\t\t\t\t{{ form_row(form.valorInicialMn) }}
 \t\t\t\t\t{{ form_row(form.valorInicialCuc) }}
@@ -132,7 +133,6 @@ class __TwigTemplate_ae10f5d98a7af0e758953efb59c1e50dc0dfb4b181b7ca2bf6bfcf3e9ea
 \t\t\t\t\t{{ form_row(form.isCliente) }}
 \t\t\t\t\t{{ form_row(form.isProveedor) }}
 \t\t\t\t\t{{ form_row(form.ministerio) }}
-\t\t\t\t\t{{ form_row(form.empresa) }}
 
 <button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Añadir</button>
 {{ form_end(form) }}", ":contrato:_form.html.twig", "/var/www/html/jComercial/app/Resources/views/contrato/_form.html.twig");

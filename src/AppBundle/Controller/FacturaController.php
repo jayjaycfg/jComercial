@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Factura;
 use AppBundle\Form\FacturaFormType;
+use Doctrine\Common\Collections\ArrayCollection;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,6 +21,31 @@ use Symfony\Component\HttpFoundation\Response;
 class FacturaController extends Controller
 {
 
+    /**
+     * @Route("/test", name="testin")
+     */
+    public function testAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $facturas = $em->getRepository('AppBundle:Factura')
+            ->findAll();
+        $arr = new ArrayCollection();
+            foreach ($facturas as $factura)
+            {
+                $factura  = $em->getRepository('AppBundle:Factura')
+                                ->findFacturaConContratoAsociadoEmpresa($factura->getEmpresa());
+                if($factura){
+                $arr[] = $factura;
+                }
+            }
+
+        dump($arr);
+        if(!$facturas){
+            return new Response('Nada');
+        }
+        return new Response('TRUE');
+    }
 
     /**
      * @Route("/listar", name="list_factura")
@@ -47,18 +73,24 @@ class FacturaController extends Controller
      */
     public function newAction(Request $request)
     {
-        $usuario =$this->container->get('security.authentication_utils')->getLastUsername();
-//        dump($usuario);
+        $usuario = $this->container->get('security.authentication_utils')->getLastUsername();
+
         $form = $this->createForm(FacturaFormType::class);
         $form->handleRequest($request);
-            if($form->isSubmitted() && $form->isValid()){
+        if ($form->isSubmitted() && $form->isValid()) {
 //                $factura = new Factura();
-                $factura  = $form->getData();
+                $factura = $form->getData();
                 $factura->setUsuario($usuario);
                 $factura->setFechaAt(new \DateTime('now'));
 
+                $em = $this->getDoctrine()->getManager();
+                $contrato = $em->getRepository('AppBundle:Contrato')
+                    ->findOneBy([
+                        'id' => $factura->getContrato()->getId()
+                    ]);
+                if($contrato->getEmpresa() === $factura->getEmpresa())
+                {
 
-                $em  = $this->getDoctrine()->getManager();
                 $em->persist($factura);
                 $em->flush();
 
@@ -67,6 +99,14 @@ class FacturaController extends Controller
                     'Factura creada satisfactoriamente');
 
                  return $this->redirectToRoute('list_factura');
+                }else{
+                    $this->addFlash(
+                        'error',
+                        'El contrato '.$factura->getContrato().
+                        ' esta asociado a la empresa '.$contrato->getEmpresa()->getNombre().
+                        ''
+                    );
+                }
             }elseif ($form->isSubmitted()){
                 $this->addFlash(
                     'error',
@@ -84,9 +124,7 @@ class FacturaController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $factura = $em->getRepository('AppBundle:Factura')
-            ->findOneBy([
-                'id' => $factura->getId()
-            ]);
+            ->findFactura($factura->getId());
         if(!$factura){
             return $this->createNotFoundException("No se encontró la factura solicitada");
         }
@@ -140,4 +178,5 @@ class FacturaController extends Controller
             }
             return new Response(null,204);
     }
+
 }

@@ -15,11 +15,11 @@ class __TwigTemplate_bc68a533d3c929f418ac2f4cd8136bd0850b36df66bc2f61261322c24d8
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d73cbdf7b1d6a00c1f34ba542218cddc9fa010495680cc24d47d67162b8024cf = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_d73cbdf7b1d6a00c1f34ba542218cddc9fa010495680cc24d47d67162b8024cf->enter($__internal_d73cbdf7b1d6a00c1f34ba542218cddc9fa010495680cc24d47d67162b8024cf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:_form.html.twig"));
+        $__internal_74bc776ae1c6cd57cc1acd41d9649b4bd98db0da7aacaa7d11066ca92467fc70 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_74bc776ae1c6cd57cc1acd41d9649b4bd98db0da7aacaa7d11066ca92467fc70->enter($__internal_74bc776ae1c6cd57cc1acd41d9649b4bd98db0da7aacaa7d11066ca92467fc70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:_form.html.twig"));
 
-        $__internal_e9e7b181c1c7c779cc2e9e814794aef2e9399792679bcb4915b7a703398b9572 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e9e7b181c1c7c779cc2e9e814794aef2e9399792679bcb4915b7a703398b9572->enter($__internal_e9e7b181c1c7c779cc2e9e814794aef2e9399792679bcb4915b7a703398b9572_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:_form.html.twig"));
+        $__internal_fd19484284132461b6ca180007510e48ae876c8bdcdbc137260bc1fa9241d13b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_fd19484284132461b6ca180007510e48ae876c8bdcdbc137260bc1fa9241d13b->enter($__internal_fd19484284132461b6ca180007510e48ae876c8bdcdbc137260bc1fa9241d13b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", ":factura:_form.html.twig"));
 
         // line 1
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
@@ -30,60 +30,54 @@ class __TwigTemplate_bc68a533d3c929f418ac2f4cd8136bd0850b36df66bc2f61261322c24d8
         echo "
 
 \t";
-        // line 5
-        echo "\t\t";
-        // line 6
-        echo "\t";
-        // line 7
-        echo "\t";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "contrato", array()), 'row');
-        echo "
-\t";
-        // line 8
+        // line 4
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "empresa", array()), 'row');
         echo "
 \t";
-        // line 9
+        // line 5
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "contrato", array()), 'row');
+        echo "
+\t";
+        // line 6
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "programa", array()), 'row');
         echo "
 \t";
-        // line 10
+        // line 7
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "descripcionDelGasto", array()), 'row');
         echo "
 \t";
-        // line 11
+        // line 8
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "cantidad", array()), 'row');
         echo "
 \t";
-        // line 12
+        // line 9
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "precio", array()), 'row');
         echo "
 \t";
-        // line 13
+        // line 10
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "participante", array()), 'row');
         echo "
 \t";
-        // line 15
-        echo "\t";
+        // line 11
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "isCancelada", array()), 'row');
         echo "
 
 \t";
-        // line 17
+        // line 13
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "explicacionPorCancelada", array()), 'row');
         echo "
 
 <button type=\"submit\" class=\"btn btn-primary\" formnovalidate>Añadir</button>
 ";
-        // line 20
+        // line 16
         echo         $this->env->getRuntime('Symfony\Bridge\Twig\Form\TwigRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
         echo "
 ";
         
-        $__internal_d73cbdf7b1d6a00c1f34ba542218cddc9fa010495680cc24d47d67162b8024cf->leave($__internal_d73cbdf7b1d6a00c1f34ba542218cddc9fa010495680cc24d47d67162b8024cf_prof);
+        $__internal_74bc776ae1c6cd57cc1acd41d9649b4bd98db0da7aacaa7d11066ca92467fc70->leave($__internal_74bc776ae1c6cd57cc1acd41d9649b4bd98db0da7aacaa7d11066ca92467fc70_prof);
 
         
-        $__internal_e9e7b181c1c7c779cc2e9e814794aef2e9399792679bcb4915b7a703398b9572->leave($__internal_e9e7b181c1c7c779cc2e9e814794aef2e9399792679bcb4915b7a703398b9572_prof);
+        $__internal_fd19484284132461b6ca180007510e48ae876c8bdcdbc137260bc1fa9241d13b->leave($__internal_fd19484284132461b6ca180007510e48ae876c8bdcdbc137260bc1fa9241d13b_prof);
 
     }
 
@@ -99,7 +93,7 @@ class __TwigTemplate_bc68a533d3c929f418ac2f4cd8136bd0850b36df66bc2f61261322c24d8
 
     public function getDebugInfo()
     {
-        return array (  79 => 20,  73 => 17,  67 => 15,  63 => 13,  59 => 12,  55 => 11,  51 => 10,  47 => 9,  43 => 8,  38 => 7,  36 => 6,  34 => 5,  29 => 2,  25 => 1,);
+        return array (  73 => 16,  67 => 13,  62 => 11,  58 => 10,  54 => 9,  50 => 8,  46 => 7,  42 => 6,  38 => 5,  34 => 4,  29 => 2,  25 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -115,17 +109,13 @@ class __TwigTemplate_bc68a533d3c929f418ac2f4cd8136bd0850b36df66bc2f61261322c24d8
         return new Twig_Source("{{ form_start(form) }}
 \t{{ form_errors(form) }}
 
-\t{#{{ form_row(form.usuario,{#}
-\t\t{#'value' : '{{ app.user.name }}'#}
-\t{#}) }}#}
-\t{{ form_row(form.contrato) }}
 \t{{ form_row(form.empresa) }}
+\t{{ form_row(form.contrato) }}
 \t{{ form_row(form.programa) }}
 \t{{ form_row(form.descripcionDelGasto) }}
 \t{{ form_row(form.cantidad) }}
 \t{{ form_row(form.precio) }}
 \t{{ form_row(form.participante) }}
-\t{#{{ form_row(form.fechaAt) }}#}
 \t{{ form_row(form.isCancelada) }}
 
 \t{{ form_row(form.explicacionPorCancelada) }}

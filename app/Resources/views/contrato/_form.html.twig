@@ -1,5 +1,6 @@
 {{ form_start(form) }}
 					{{ form_row(form.noDeOrden) }}
+					{{ form_row(form.empresa) }}
 					{{ form_row(form.tipoDeContrato) }}
 					{{ form_row(form.valorInicialMn) }}
 					{{ form_row(form.valorInicialCuc) }}
@@ -12,7 +13,6 @@
 					{{ form_row(form.isCliente) }}
 					{{ form_row(form.isProveedor) }}
 					{{ form_row(form.ministerio) }}
-					{{ form_row(form.empresa) }}
 
 <button type="submit" class="btn btn-primary" formnovalidate>Añadir</button>
 {{ form_end(form) }}
