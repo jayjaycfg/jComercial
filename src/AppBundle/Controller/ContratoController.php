@@ -11,6 +11,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Contrato;
 
+use AppBundle\Form\BuscarFormType;
 use AppBundle\Form\ContratoFormType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -26,11 +27,18 @@ class ContratoController extends Controller
     /**
      * @Route("/listar", name="listar_contrato")
      */
-    public function listarAction()
+    public function listarAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $contratos = $em->getRepository('AppBundle:Contrato')
-            ->findAll();
+            ->findTodosLosContratos();
+
+        $paginator = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $contratos,
+            $request->query->getInt('page', 1),
+            5
+        );
             if(!$contratos){
                $this->addFlash(
                    'error',
@@ -38,10 +46,47 @@ class ContratoController extends Controller
                     return $this->redirectToRoute('crear_contrato');
             }
             return $this->render('contrato/list.html.twig',[
-                'contratos' => $contratos
+                'contratos' => $contratos,
+                'pagination' => $pagination
             ]);
     }
+    /**
+     * @Route("/listar/clientes", name="listar_clientes")
+     */
+    public function listarClientesAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $contratos = $em->getRepository('AppBundle:Contrato')
+            ->findContratosConClientes();
+        if(!$contratos){
+            $this->addFlash(
+                'error',
+                'No se encontraron Contratos en el sistema, por favor inserte un contrato');
+            return $this->redirectToRoute('crear_contrato');
+        }
+        return $this->render('contrato/list.html.twig',[
+            'contratos' => $contratos
+        ]);
+    }
 
+    /**
+     * @Route("/listar/proveedores", name="listar_proveedores")
+     */
+    public function listarProveedoresAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $contratos = $em->getRepository('AppBundle:Contrato')
+            ->findContratosConProveedores();
+        if(!$contratos){
+            $this->addFlash(
+                'error',
+                'No se encontraron Contratos en el sistema, por favor inserte un contrato');
+            return $this->redirectToRoute('crear_contrato');
+        }
+        return $this->render('contrato/list.html.twig',[
+            'contratos' => $contratos
+        ]);
+    }
     /**
      * @Route("/crear", name="crear_contrato")
      */
@@ -51,9 +96,19 @@ class ContratoController extends Controller
         $form = $this->createForm(ContratoFormType::class);
         $form->handleRequest($request);
             if($form->isSubmitted() && $form->isValid()){
-//                $contrato = new Contrato();
+
                 $contrato = $form->getData();
 
+//                $contrato = new Contrato();
+                if($contrato->getisClienteOrProveedor() == '1')
+                {
+                    $contrato->setIsCliente(false);
+                    $contrato->setIsProveedor(true);
+                }else{
+
+                    $contrato->setIsCliente(true);
+                    $contrato->setIsProveedor(false);
+                    }
                 $em->persist($contrato);
                 $em->flush();
 
@@ -61,6 +116,8 @@ class ContratoController extends Controller
                     'success',
                     'Contrato creado con exito');
                     return $this->redirectToRoute('listar_contrato');
+
+
             }elseif ($form->isSubmitted()){
                 $this->addFlash(
                     'error',
@@ -71,6 +128,7 @@ class ContratoController extends Controller
                     ]);
     }
 
+
     /**
      * @Route("/{id}/editar", name="modificar_contrato")
      */
@@ -79,6 +137,7 @@ class ContratoController extends Controller
 
         $form  = $this->createForm(ContratoFormType::class,$contrato);
         $form->handleRequest($request);
+
             if($form->isSubmitted() && $form->isValid()){
                 $contrato = $form->getData();
 

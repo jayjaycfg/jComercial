@@ -24,13 +24,14 @@
 					<span class="caret"></span>
 				</a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ path('listar_contrato') }}">Cliente</a></li>
-                    <li><a href="#">Proveedor</a></li>
-                </ul>
+                    <li><a href="{{ path('listar_clientes') }}">Cliente</a></li>
+					<li><a href="{{ path('listar_proveedores') }}">Proveedor</a></li>
+					<li><a href="{{ path('listar_contrato') }}">Todos</a></li>
+				</ul>
 			</li>
 			<li><a href="{{ path('list_factura') }}">Facturas</a></li>
             {#{% endif %}#}
-			{#<li class="search"><a href="#" class="js-header-search-toggle"><i class="fa fa-search"></i></a></li>#}
+			<li class="search"><a href="{{ path('buscar') }}" class="js-header-search-toggle">Buscar <i class="fa fa-search"></i></a></li>
 		    {% if is_granted('ROLE_USER') %}
             <li><a href="{{ path('security_logout') }}">Logout</a></li>
             {% else %}

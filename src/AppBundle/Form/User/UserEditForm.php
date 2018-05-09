@@ -5,6 +5,7 @@ namespace AppBundle\Form\User;
 use AppBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -19,11 +20,11 @@ class UserEditForm extends AbstractType
             ->add('lastName',null,[
                 'label' => 'Apellidos'
             ])
-            ->add('plainPassword', null,[
+            ->add('plainPassword', PasswordType::class,[
                 'label'=> 'Contraseña'
             ])
             ->add('roles', ChoiceType::class,[
-                'label' => 'Ocupación',
+                'label' => 'Rol',
                 'choices' =>[
                     'ROLE_ADMIN' => 'ROLE_ADMIN',
                     'ROLE_USER' => 'ROLE_USER',

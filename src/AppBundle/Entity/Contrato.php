@@ -35,14 +35,18 @@ class Contrato
      *@Assert\NotBlank(message="Campo Obligatorio")
      */
     private $tipoDeContrato = [];
+
+
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="Campo Obligatorio")
+     *@Assert\Range(min="0", minMessage="No inserte valores negativos")
      */
     private $valorInicialMn = 0 ;
     /**
      * @ORM\Column(type="integer")
      * @Assert\NotBlank(message="Campo Obligatorio")
+     * @Assert\Range(min="0", minMessage="No inserte valores negativos")
      */
     private $valorInicialCuc = 0;
     /**
@@ -77,13 +81,12 @@ class Contrato
      */
     private $correo;
     /**
-     * @ORM\Column(type="boolean")
-     *
+     * @ORM\Column(type="boolean", nullable= false)
      *
      */
     private $isCliente = true;
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", nullable=false)
      *
      */
     private $isProveedor = false;
@@ -92,6 +95,9 @@ class Contrato
      * @Assert\NotBlank(message="Campo Obligatorio")
      */
     private $ministerio = [];
+
+    private $isClienteOrProveedor;
+
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Empresa", inversedBy="contratos")
@@ -191,7 +197,12 @@ class Contrato
 
     public function setFechaDeVencimiento($fechaDeVencimiento)
     {
-        $this->fechaDeVencimiento = $fechaDeVencimiento;
+        if($this->getFechaDeOtorgamiento() != $fechaDeVencimiento && $this->getFechaDeOtorgamiento()< $fechaDeVencimiento)
+        {
+            $this->fechaDeVencimiento = $fechaDeVencimiento;
+
+        }
+        return null;
     }
 
     public function getTelefono()
@@ -263,6 +274,26 @@ class Contrato
     {
         $this->facturas = $facturas;
     }
+
+    public function getisClienteOrProveedor()
+    {
+        if($this->getisCliente() == true)
+        {
+            $this->setIsClienteOrProveedor(0);
+        }else{
+            $this->setIsClienteOrProveedor(1);
+        }
+
+
+        return $this->isClienteOrProveedor;
+    }
+
+    public function setIsClienteOrProveedor($isClienteOrProveedor)
+    {
+        $this->isClienteOrProveedor = $isClienteOrProveedor;
+    }
+
+
 
     public function __toString()
     {

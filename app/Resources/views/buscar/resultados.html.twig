@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+
+				<div class="pull-right" style="margin-bottom: 10px; margin-top: 20px;">
+					{{ form_start(form) }}
+					{{ form_errors(form) }}
+					<button type="submit" class="btn btn-block btn-primary pull-right">
+						Buscar <span class="fa fa-search-plus"></span>
+					</button>
+
+					{#{{ form_label(form.comboBox) }}#}
+					{#{{ form_widget(form.comboBox) }}#}
+						{#<span class="glyphicon glyphicon-search form-control-feedback"></span>#}
+					{#{{ form_errors(form.comboBox) }}#}
+					{{ form_row(form.comboBox) }}
+
+					{#<button type="submit" class="btn btn-block btn-primary pull-right">#}
+						{#Buscar <span class="fa fa-search-plus"></span>#}
+					{#</button>#}
+					{{ form_end(form) }}
+				</div>
+				<h1>Resultados:</h1>
+
+				<table class="table table-striped js-table">
+					<tr>
+						<th>ID</th>
+						<th>Numero de Orden</th>
+						<th>Tipo de Contrato</th>
+						<th>Valor inicial en MN</th>
+						<th>Valor inicial en CUC</th>
+						<th>Suplemento</th>
+						<th>Acta de Firmado</th>
+						<th>Fecha de Otorgamiento</th>
+						<th>Fecha de Vencimiento</th>
+						<th>Telefono</th>
+						<th>Correo</th>
+						{#<th>Cliente</th>#}
+						{#<th>Proveedor</th>#}
+						<th>Ministerio</th>
+						<th>&nbsp;</th>
+						<th>&nbsp;</th>
+					</tr>
+					{% for resultado in resultados %}
+						<tr>
+							<td>
+								<a href="{{ path('mostrar_contrato',{
+									'id' : resultado.id
+								}) }}">
+									{{ resultado.id }}
+								</a>
+							</td>
+							<td>{{ resultado.noDeOrden}}</td>
+							<td>{{ resultado.tipoDeContrato |json_encode}}</td>
+							<td>{{ resultado.valorInicialMn |number_format}}</td>
+							<td>{{ resultado.valorInicialCuc |number_format}}</td>
+							<td>{{ resultado.isSuplemento}}</td>
+							<td>{{ resultado.actaDeFirmado}}</td>
+							<td>{{ resultado.fechaDeOtorgamiento |date('Y-m-d')}}</td>
+							<td>{{ resultado.fechaDeVencimiento |date('Y-m-d')}}</td>
+							<td>{{ resultado.telefono}}</td>
+							<td>{{ resultado.correo}}</td>
+							{#<td>{{ resultado.isCliente}}</td>#}
+							{#<td>{{ resultado.isProveedor}}</td>#}
+							<td>{{ resultado.ministerio |json_encode}}</td>
+
+							<td>
+								<a href="{{ path('modificar_contrato',{
+									'id' : resultado.id
+								}) }}" class="pull-right btn-xs btn-link">
+									<span class="fa fa-pencil"></span>
+								</a>
+							</td>
+							<td>
+								<a href="#" class="pull-right btn-xs btn-link">
+									<span class="fa fa-save"></span>
+
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+{% endblock %}

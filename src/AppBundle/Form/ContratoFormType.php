@@ -44,8 +44,18 @@ class ContratoFormType extends AbstractType
            ])
            ->add('telefono')
            ->add('correo',EmailType::class)
-           ->add('isCliente')
-           ->add('isProveedor')
+
+//           ->add('isCliente')
+//           ->add('isProveedor')
+           ->add('isClienteOrProveedor',ChoiceType::class,[
+               'label' => 'Cliente o Proveedor',
+               'choices' => [
+                   'Cliente' => 0,
+                   'Proveedor' => 1
+               ],
+               'multiple' => false,
+               'expanded' => true
+           ])
            ->add('ministerio',ChoiceType::class,[
                'placeholder' => 'Seleccione un programa',
                'choices' => [

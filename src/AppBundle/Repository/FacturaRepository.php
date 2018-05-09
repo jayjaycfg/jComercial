@@ -73,20 +73,18 @@ class FacturaRepository  extends EntityRepository
 
     }
 
-//    public function findFacturaConContratoAsociadoEmpresa($facturaEmpresa)
-//    {
-//        return $this->createQueryBuilder('factura')
-//            ->leftJoin('factura.contrato','contrato')
-//            ->addSelect('contrato')
-//            ->leftJoin('factura.empresa', 'empresa')
-//            ->addSelect('empresa')
-//            ->andWhere('contrato.empresa = :facturaEmpresa')
-//            ->setParameter('facturaEmpresa', $facturaEmpresa)
-//            ->andWhere('factura.empresa = :contratoEmpresa')
-//            ->setParameter('contratoEmpresa',$facturaEmpresa)
-//            ->getQuery()
-//            ->execute()
-//            ;
-//
-//    }
+    public function findReporteMensual($mes)
+    {
+        return $this->createQueryBuilder('factura')
+            ->leftJoin('factura.contrato','contrato')
+            ->addSelect('contrato')
+            ->leftJoin('factura.empresa', 'empresa')
+            ->addSelect('empresa')
+            ->andWhere('factura.fechaAt = :mes')
+            ->setParameter('mes', $mes)
+            ->getQuery()
+            ->execute()
+            ;
+
+    }
 }

@@ -28,6 +28,8 @@ final class Versions
   'fig/link-util' => '1.0.0@1a07821801a148be4add11ab0603e4af55a72fac',
   'incenteev/composer-parameter-handler' => 'v2.1.2@d7ce7f06136109e81d1cb9d57066c4d4a99cf1cc',
   'jdorn/sql-formatter' => 'v1.2.17@64990d96e0959dff8e059dfcdc1af130728d92bc',
+  'knplabs/knp-components' => '1.3.8@b65f69ff04d2f1b7a67ae592273ca6f4d1aa3e5f',
+  'knplabs/knp-paginator-bundle' => 'v2.7.2@b94a409cf6507589a9697472909c0adaa0b76d06',
   'monolog/monolog' => '1.23.0@fd8c787753b3a2ad11bc60c063cff1358a32a3b4',
   'ocramius/package-versions' => '1.1.3@72b226d2957e9e6a9ed09aeaa29cabd840d1a3b7',
   'ocramius/proxy-manager' => '2.0.4@a55d08229f4f614bf335759ed0cf63378feeb2e6',
@@ -61,7 +63,7 @@ final class Versions
   'nelmio/alice' => 'v3.1.1@bd42498862813b1d0b4de8c43877a0a33611f2b4',
   'sensio/generator-bundle' => 'v3.1.6@128bc5dabc91ca40b7445f094968dd70ccd58305',
   'symfony/phpunit-bridge' => 'v3.3.10@6e40d1c8bc4037edf3852c0b29fdd2923c4e2133',
-  'audioxtreme/heroquest' => '9999999-dev@4d023d533b3054d3ac024b14cd5705c10acbb0c6',
+  'audioxtreme/heroquest' => '9999999-dev@5e538e864bf199befd02021143fa9a9abe23f3fc',
 );
 
     private function __construct()

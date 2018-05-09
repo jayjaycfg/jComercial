@@ -8,7 +8,9 @@
 	{{ form_row(form.cantidad) }}
 	{{ form_row(form.precio) }}
 	{{ form_row(form.participante) }}
-	{{ form_row(form.isCancelada) }}
+	{{ form_row(form.isCancelada,{
+		'label' : 'Cancelada'
+	}) }}
 
 	{{ form_row(form.explicacionPorCancelada) }}
 

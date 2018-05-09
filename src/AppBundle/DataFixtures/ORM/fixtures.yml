@@ -19,7 +19,7 @@ AppBundle\Entity\Contrato:
         isSuplemento: <boolean(75)>
         actaDeFirmado: <sentence()>
         fechaDeOtorgamiento: <dateTimeBetween('-6 years', 'now')>
-        fechaDeVencimiento: <dateTimeBetween('-3 years', 'now')>
+        fechaDeVencimiento: <dateTimeBetween('now', '3 years')>
         telefono: <numberBetween(435100,435299)>
         correo: 'correo'
         isCliente: <boolean(80)>
@@ -34,7 +34,7 @@ AppBundle\Entity\Factura:
         cantidad: <numberBetween(1,6)>
         precio: <numberBetween(2,8)>
         participante: <name()>
-        fechaAt: <dateTimeBetween('yesterday', 'now')>
+        fechaAt: <dateTimeBetween('-3 weeks', 'now')>
         isCancelada: <boolean(25)>
         explicacionPorCancelada: '50%?  Explicaciones : Nada '
         usuario: user<current()>

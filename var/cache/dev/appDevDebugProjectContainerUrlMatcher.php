@@ -137,10 +137,32 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/contrato')) {
-            // listar_contrato
-            if ('/contrato/listar' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\ContratoController::listarAction',  '_route' => 'listar_contrato',);
+        // buscar
+        if ('/buscar' === $trimmedPathinfo) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'buscar');
+            }
+
+            return array (  '_controller' => 'AppBundle\\Controller\\BuscarController::busquedaAction',  '_route' => 'buscar',);
+        }
+
+        if (0 === strpos($pathinfo, '/contrato')) {
+            if (0 === strpos($pathinfo, '/contrato/listar')) {
+                // listar_contrato
+                if ('/contrato/listar' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ContratoController::listarAction',  '_route' => 'listar_contrato',);
+                }
+
+                // listar_clientes
+                if ('/contrato/listar/clientes' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ContratoController::listarClientesAction',  '_route' => 'listar_clientes',);
+                }
+
+                // listar_proveedores
+                if ('/contrato/listar/proveedores' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\ContratoController::listarProveedoresAction',  '_route' => 'listar_proveedores',);
+                }
+
             }
 
             // crear_contrato

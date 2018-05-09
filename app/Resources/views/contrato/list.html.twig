@@ -31,7 +31,8 @@
 						<th>&nbsp;</th>
 						<th>&nbsp;</th>
 					</tr>
-					{% for contrato in contratos %}
+					{% for contrato in pagination %}
+
 						<tr>
 							<td>
 								<a href="{{ path('mostrar_contrato',{
@@ -73,6 +74,16 @@
 						</tr>
 					{% endfor %}
 				</table>
+									<div class="container text-center">
+										<div class="row">
+											<div>
+												<ul class="pagination">
+													   {{ knp_pagination_render(pagination) }}
+												</ul>
+											</div>
+										</div>
+									</div>
+
 			</div>
 		</div>
 	</div>
